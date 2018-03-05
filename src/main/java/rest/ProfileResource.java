@@ -1,11 +1,10 @@
 package rest;
 
-import enums.Roles;
+import entities.Profile;
 import services.ProfileService;
 import javax.ejb.EJB;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/profile")
@@ -15,17 +14,94 @@ public class ProfileResource {
 	ProfileService profileService;
 
 	@GET
-	@Path("/{param}")
-	public Response printMessage(@PathParam("param") String msg) {
-		String result;
-		if (profileService != null) {
-			profileService.createProfile();
-			result = "succes";
+	@Path("/getProfile/{profileId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getProfile(@PathParam("profileId") long profileId){
+		try{
+			return Response.ok(
+					profileService.getProfile(profileId)).build();
 		}
-		else{
-			//profileService.createProfile();
-			result = "failure";
+		catch(Exception e){
+			return Response.serverError().build();
 		}
-		return Response.status(200).entity(result).build();
+	}
+
+	@POST
+	@Path("/updateUsername/{profileId},{newUsername}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response updateUsername(@PathParam("profileId") long profileId,
+								   @PathParam("newUsername") String newUsername){
+		try{
+			profileService.updateUsername(profileId, newUsername);
+			return Response.ok().build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@POST
+	@Path("/followProfile")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response followProfile(Profile profileToFollow){
+		try{
+			profileService.followProfile(profileToFollow);
+			return Response.ok().build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@POST
+	@Path("/createProfile")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response createProfile(Profile profile){
+		try{
+			profileService.createProfile(profile);
+			return Response.ok().build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@GET
+	@Path("/getProfiles/{profileName}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getProfiles(@PathParam("profileName") String profileName){
+		try{
+			return Response.ok(
+					profileService.getProfiles(profileName)).build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@GET
+	@Path("/getFollowers/{profileId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getFollowers(@PathParam("profileId") long profileId){
+		try{
+			return Response.ok(
+					profileService.getFollowers(profileId)).build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@GET
+	@Path("/getFollowers/{profileId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getFollowing(@PathParam("profileId") long profileId){
+		try{
+			return Response.ok(
+					profileService.getFollowing(profileId)).build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
 	}
 }

@@ -5,14 +5,25 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@NamedQueries({
+		@NamedQuery(name="Profile.getProfileById",
+				query="SELECT p FROM Profile p WHERE p.id = :profileId"),
+		@NamedQuery(name="Profile.getProfiles",
+				query="SELECT p FROM Profile p WHERE p.username LIKE :username"),
+		@NamedQuery(name="Profile.getFollowers",
+				query="SELECT p.followers FROM Profile p"),
+		@NamedQuery(name="Profile.getFollowing",
+				query="SELECT p.following FROM Profile p"),
+})
 public class Profile implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@Column(unique = true)
+	@Column(unique = true, nullable = false)
 	private String email;
-	@Column(unique = true)
+	@Column(unique = true, nullable = false)
 	private String username;
+	@Column(nullable = false)
 	private String password;
 	private String biography;
 	private String website;
