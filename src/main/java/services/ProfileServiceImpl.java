@@ -12,7 +12,7 @@ public class ProfileServiceImpl implements ProfileService {
 	@PersistenceContext(name = "kwetterPU")
 	EntityManager entityManager;
 
-	public void create(){
+	public void createProfile(){
 		this.entityManager.persist(new Profile());
 		this.entityManager.flush();
 	}
