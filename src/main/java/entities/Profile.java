@@ -14,6 +14,10 @@ import java.util.List;
 				query="SELECT p.followers FROM Profile p"),
 		@NamedQuery(name="Profile.getFollowing",
 				query="SELECT p.following FROM Profile p"),
+		@NamedQuery(name="Profile.authenticate",
+				query="SELECT p.password FROM Profile p WHERE p.email = :email AND p.password = :password"),
+		@NamedQuery(name="Profile.getProfileByToken",
+				query="SELECT p FROM Profile p WHERE p.token = :token"),
 })
 public class Profile implements Serializable {
 	@Id
@@ -28,6 +32,7 @@ public class Profile implements Serializable {
 	private String biography;
 	private String website;
 	private String location;
+	private String token;
 	@OneToMany
 	private List<Kweet> kweets;
 	@OneToMany
@@ -116,5 +121,13 @@ public class Profile implements Serializable {
 
 	public void setFollowing(List<Profile> following) {
 		this.following = following;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
 }
