@@ -35,10 +35,17 @@ public class Profile implements Serializable {
 	private String location;
 	private String token;
 	@OneToMany
+	@JoinTable
 	private List<Kweet> kweets;
 	@OneToMany
+	@JoinTable(name = "profile_followers"
+			, joinColumns = @JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false)
+			, inverseJoinColumns = @JoinColumn(name = "follower_id", referencedColumnName = "id", nullable = false))
 	private List<Profile> followers;
 	@OneToMany
+	@JoinTable(name = "profile_following"
+			, joinColumns = @JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false)
+			, inverseJoinColumns = @JoinColumn(name = "following_id", referencedColumnName = "id", nullable = false))
 	private List<Profile> following;
 
 	public Profile(){

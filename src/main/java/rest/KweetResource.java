@@ -2,15 +2,21 @@ package rest;
 
 import entities.Kweet;
 import entities.Profile;
+import filters.AuthenticationFilter.AuthenticatedProfile;
 import services.KweetService;
 
 import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/Kweet")
 public class KweetResource {
+
+	@Inject
+	@AuthenticatedProfile
+	Profile authenticatedProfile;
 
 	@EJB
 	KweetService kweetService;

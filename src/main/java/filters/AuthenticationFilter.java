@@ -6,6 +6,7 @@ import javax.annotation.Priority;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.inject.Qualifier;
+import javax.ws.rs.ForbiddenException;
 import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
@@ -76,7 +77,11 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 						.build());
 	}
 
-	private Profile validateToken(String token) throws Exception {
-		return authenticationService.getProfileByToken(token);
+	private Profile validateToken(String token) {
+		Profile profile = authenticationService.getProfileByToken(token);
+		if (profile == null){
+			throw new ForbiddenException();
+		}
+		else return profile;
 	}
 }

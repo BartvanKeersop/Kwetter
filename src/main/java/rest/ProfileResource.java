@@ -1,8 +1,10 @@
 package rest;
 
 import entities.Profile;
+import filters.AuthenticationFilter.AuthenticatedProfile;
 import services.ProfileService;
 import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -12,6 +14,10 @@ public class ProfileResource {
 
 	@EJB
 	ProfileService profileService;
+
+	@Inject
+	@AuthenticatedProfile
+	Profile authenticatedProfile;
 
 	@GET
 	@Path("/getProfile/{profileId}")
@@ -45,7 +51,7 @@ public class ProfileResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response followProfile(Profile profileToFollow){
 		try{
-			profileService.followProfile(profileToFollow);
+			profileService.followProfile(authenticatedProfile, profileToFollow);
 			return Response.ok().build();
 		}
 		catch(Exception e){

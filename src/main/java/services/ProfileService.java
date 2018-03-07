@@ -8,7 +8,7 @@ import java.util.List;
 public interface ProfileService {
 	void createProfile(Profile profile);
 	void updateUsername(long profileId, String newName);
-	void followProfile(Profile profileToFollow);
+	void followProfile(Profile myProfileProfile, Profile profileToFollow);
 	Profile getProfile(long profileId);
 	List<Profile> getProfiles(String name);
 	List<Profile> getFollowers(long profileId);

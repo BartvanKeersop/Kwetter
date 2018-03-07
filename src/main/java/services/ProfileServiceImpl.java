@@ -18,13 +18,9 @@ public class ProfileServiceImpl implements ProfileService {
 		this.entityManager.flush();
 	}
 
-	public void followProfile(Profile profileToFollow){
-		/*
-		Profile myProfile = entityManager.find(Profile.class, mp.getId());
-		Profile profileToFollow = entityManager.find(Profile.class, ptf.getId());
+	public void followProfile(Profile myProfile, Profile profileToFollow){
 		myProfile.getFollowing().add(profileToFollow);
 		entityManager.merge(myProfile);
-		*/
 	}
 
 	public void updateUsername(long profileId, String newName) {

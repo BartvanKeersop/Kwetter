@@ -1,9 +1,11 @@
 package rest;
 
 import entities.Profile;
+import filters.AuthenticationFilter.AuthenticatedProfile;
 import services.AuthenticationService;
 
 import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -13,6 +15,10 @@ public class AuthenticationResource {
 
 	@EJB
 	AuthenticationService authenticationService;
+
+	@Inject
+	@AuthenticatedProfile
+	Profile authenticatedProfile;
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)

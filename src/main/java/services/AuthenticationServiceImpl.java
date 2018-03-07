@@ -7,9 +7,9 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.ws.rs.NotFoundException;
 import java.security.SecureRandom;
 import java.util.Base64;
+import java.util.List;
 
 @Stateless
 public class AuthenticationServiceImpl implements AuthenticationService{
@@ -32,14 +32,18 @@ public class AuthenticationServiceImpl implements AuthenticationService{
 		}
 	}
 
-	//TODO: Make sure token is unique
 	private String generateToken(Profile profile) {
-			SecureRandom random = new SecureRandom();
-			byte bytes[] = new byte[128];
-			random.nextBytes(bytes);
-			String token = Base64.getEncoder().encodeToString(bytes);
-			writeTokenToDb(profile.getId(), token);
-			return token;
+		SecureRandom random = new SecureRandom();
+		byte bytes[] = new byte[128];
+		random.nextBytes(bytes);
+		String token = Base64.getEncoder().encodeToString(bytes);
+
+		while (getProfileByToken(token) == null){
+			token = Base64.getEncoder().encodeToString(bytes);
+		}
+
+		writeTokenToDb(profile.getId(), token);
+		return token;
 	}
 
 	private void writeTokenToDb(long profileId, String token){
@@ -54,12 +58,12 @@ public class AuthenticationServiceImpl implements AuthenticationService{
 	}
 
 	public Profile getProfileByToken(String token) {
-		try{
 		TypedQuery<Profile> query = entityManager.createNamedQuery("Profile.getProfileByToken", Profile.class);
-		return query.setParameter("token", token).getSingleResult();
+		List<Profile> profile = query.setParameter("token", token).getResultList();
+
+		if (profile.size() != 1){
+			return null;
 		}
-		catch(NotFoundException e){
-			throw(e);
-		}
+		else return profile.get(0);
 	}
 }

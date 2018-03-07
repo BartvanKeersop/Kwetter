@@ -17,8 +17,9 @@ public class Kweet implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String text;
+	@Temporal(TemporalType.DATE)
 	private Date creationDate;
-	@OneToOne
+	@ManyToOne(optional = false)
 	private Profile owner;
 	@ElementCollection
 	private List<String> hashtags;
