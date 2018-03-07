@@ -11,6 +11,7 @@ import javax.ws.rs.core.Response;
 
 @Path("/Kweet")
 public class KweetResource {
+
 	@EJB
 	KweetService kweetService;
 

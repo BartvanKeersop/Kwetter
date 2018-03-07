@@ -2,12 +2,16 @@ package services;
 
 
 import entities.Profile;
+
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.ws.rs.NotFoundException;
 import java.security.SecureRandom;
 import java.util.Base64;
 
+@Stateless
 public class AuthenticationServiceImpl implements AuthenticationService{
 
 	@PersistenceContext(name = "kwetterPU")
@@ -50,7 +54,12 @@ public class AuthenticationServiceImpl implements AuthenticationService{
 	}
 
 	public Profile getProfileByToken(String token) {
+		try{
 		TypedQuery<Profile> query = entityManager.createNamedQuery("Profile.getProfileByToken", Profile.class);
 		return query.setParameter("token", token).getSingleResult();
+		}
+		catch(NotFoundException e){
+			throw(e);
+		}
 	}
 }

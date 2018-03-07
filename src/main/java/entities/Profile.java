@@ -1,5 +1,6 @@
 package entities;
 
+import javax.enterprise.inject.Model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
 		@NamedQuery(name="Profile.getFollowing",
 				query="SELECT p.following FROM Profile p"),
 		@NamedQuery(name="Profile.authenticate",
-				query="SELECT p.password FROM Profile p WHERE p.email = :email AND p.password = :password"),
+				query="SELECT p FROM Profile p WHERE p.email = :email AND p.password = :password"),
 		@NamedQuery(name="Profile.getProfileByToken",
 				query="SELECT p FROM Profile p WHERE p.token = :token"),
 })

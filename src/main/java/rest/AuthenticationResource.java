@@ -15,12 +15,12 @@ public class AuthenticationResource {
 	AuthenticationService authenticationService;
 
 	@POST
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/login")
 	public Response Login(Profile profile) {
 		try {
 			String token = authenticationService
-					.authenticate(profile.getUsername(), profile.getPassword());
+					.authenticate(profile.getEmail(), profile.getPassword());
 
 			return Response.ok(token).build();
 
@@ -30,8 +30,8 @@ public class AuthenticationResource {
 	}
 
 	@POST
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/logout")
 	public Response Logout(Profile profile) {
 		try {
 			authenticationService.deleteToken(
