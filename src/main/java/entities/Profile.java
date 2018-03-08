@@ -1,6 +1,6 @@
 package entities;
 
-import javax.enterprise.inject.Model;
+import enums.Permissions;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -30,6 +30,9 @@ public class Profile implements Serializable {
 	private String username;
 	@Column(nullable = false)
 	private String password;
+	@ElementCollection
+	@Enumerated(EnumType.STRING)
+	private List<Permissions> permission;
 	private String biography;
 	private String website;
 	private String location;
@@ -137,5 +140,13 @@ public class Profile implements Serializable {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public List<Permissions> getPermission() {
+		return permission;
+	}
+
+	public void setPermission(List<Permissions> permission) {
+		this.permission = permission;
 	}
 }

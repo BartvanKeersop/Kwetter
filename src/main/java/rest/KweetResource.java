@@ -1,8 +1,8 @@
 package rest;
 
 import entities.Kweet;
-import entities.Profile;
-import filters.AuthenticationFilter.AuthenticatedProfile;
+import filters.AuthenticationFilter.IAuthenticatedUser;
+import model.AuthenticatedUser;
 import services.KweetService;
 
 import javax.ejb.EJB;
@@ -15,8 +15,8 @@ import javax.ws.rs.core.Response;
 public class KweetResource {
 
 	@Inject
-	@AuthenticatedProfile
-	Profile authenticatedProfile;
+	@IAuthenticatedUser
+	AuthenticatedUser authenticatedUser;
 
 	@EJB
 	KweetService kweetService;
@@ -26,9 +26,8 @@ public class KweetResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getFeedKweets(){
 		try{
-			Profile profile = new Profile(); //TODO: Get profile out of session
 			return Response.ok(
-					kweetService.getMyFeedKweets(profile)).build();
+					kweetService.getMyFeedKweets(authenticatedUser.getId())).build();
 		}
 		catch(Exception e){
 			return Response.serverError().build();
@@ -40,9 +39,8 @@ public class KweetResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getMyLast10Kweets(){
 		try{
-			Profile profile = new Profile(); //TODO: Get profile out of session
 			return Response.ok(
-					kweetService.getMyLast10Kweets()).build();
+					kweetService.getMyLast10Kweets(authenticatedUser.getId())).build();
 		}
 		catch(Exception e){
 			return Response.serverError().build();
@@ -54,7 +52,7 @@ public class KweetResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createKweet(Kweet kweet){
 		try{
-			kweetService.createKweet(kweet);
+			kweetService.createKweet(authenticatedUser.getId(), kweet);
 			return Response.ok().build();
 		}
 		catch(Exception e){
@@ -67,7 +65,7 @@ public class KweetResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response deleteKweet(Kweet kweet){
 		try{
-			kweetService.deleteKweet(kweet);
+			kweetService.deleteKweet(authenticatedUser.getId(), kweet, authenticatedUser.getPermissions());
 			return Response.ok().build();
 		}
 		catch(Exception e){

@@ -1,14 +1,13 @@
-package services;
+package dao;
 
 import entities.Profile;
-import javax.ejb.Local;
+
 import java.util.List;
 
-@Local
-public interface ProfileService {
+public interface ProfileDao {
 	void createProfile(Profile profile);
-	void updateUsername(Profile profile);
-	void followProfile(long profileId, Profile profileToFollow);
+	void updateUsername(long profileId, String newName);
+	void followProfile(Profile myProfile , Profile profileToFollow);
 	Profile getProfile(long profileId);
 	List<Profile> getProfiles(String name);
 	List<Profile> getFollowers(long profileId);

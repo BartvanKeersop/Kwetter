@@ -1,8 +1,6 @@
 package model;
 
-import entities.Profile;
-import filters.AuthenticationFilter.AuthenticatedProfile;
-
+import filters.AuthenticationFilter.IAuthenticatedUser;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Produces;
@@ -11,10 +9,10 @@ import javax.enterprise.inject.Produces;
 public class AuthenticatedProfileProducer{
 
 	@Produces
-	@AuthenticatedProfile
-	private Profile authenticatedProfile;
+	@IAuthenticatedUser
+	private model.AuthenticatedUser authenticatedUser;
 
-	public void handleAuthenticationEvent(@Observes @AuthenticatedProfile Profile profile) {
-		this.authenticatedProfile = profile;
+	public void handleAuthenticationEvent(@Observes @IAuthenticatedUser AuthenticatedUser authenticatedUser) {
+		this.authenticatedUser = authenticatedUser;
 	}
 }

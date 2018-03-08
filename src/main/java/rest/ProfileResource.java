@@ -1,7 +1,8 @@
 package rest;
 
 import entities.Profile;
-import filters.AuthenticationFilter.AuthenticatedProfile;
+import filters.AuthenticationFilter.IAuthenticatedUser;
+import model.AuthenticatedUser;
 import services.ProfileService;
 import javax.ejb.EJB;
 import javax.inject.Inject;
@@ -16,8 +17,8 @@ public class ProfileResource {
 	ProfileService profileService;
 
 	@Inject
-	@AuthenticatedProfile
-	Profile authenticatedProfile;
+	@IAuthenticatedUser
+	AuthenticatedUser authenticatedUser;
 
 	@GET
 	@Path("/getProfile/{profileId}")
@@ -35,10 +36,9 @@ public class ProfileResource {
 	@POST
 	@Path("/updateUsername/{profileId},{newUsername}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response updateUsername(@PathParam("profileId") long profileId,
-								   @PathParam("newUsername") String newUsername){
+	public Response updateUsername(Profile profile){
 		try{
-			profileService.updateUsername(profileId, newUsername);
+			profileService.updateUsername(profile);
 			return Response.ok().build();
 		}
 		catch(Exception e){
@@ -51,7 +51,7 @@ public class ProfileResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response followProfile(Profile profileToFollow){
 		try{
-			profileService.followProfile(authenticatedProfile, profileToFollow);
+			profileService.followProfile(authenticatedUser.getId(), profileToFollow);
 			return Response.ok().build();
 		}
 		catch(Exception e){

@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 @NamedQueries({
 		@NamedQuery(name="Kweet.getFeedKweets",
-				query="SELECT k FROM Kweet k WHERE k.owner IN :owner"),
+				query="SELECT k FROM Kweet k WHERE k.id IN :ids ORDER BY k.creationDate DESC"),
 		@NamedQuery(name="Kweet.getMyKweetsByDateDesc",
 				query="SELECT k FROM Kweet k WHERE k.id = :id ORDER BY k.creationDate DESC")
 })

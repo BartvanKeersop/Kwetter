@@ -1,40 +1,55 @@
 package services;
 
+import dao.KweetDao;
+import dao.ProfileDao;
 import entities.Kweet;
 import entities.Profile;
+import enums.Permissions;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
 public class KweetServiceImpl implements KweetService {
 
-	@PersistenceContext(name = "kwetterPU")
-	EntityManager entityManager;
+	@EJB
+	KweetDao kweetDao;
 
-	public void createKweet(Kweet kweet) {
-		entityManager.persist(kweet);
+	@EJB
+	ProfileDao profileDao;
+
+	@Override
+	public void createKweet(long profileId, Kweet kweet) {
+		kweet.setId(profileId);
+		kweetDao.createKweet(kweet);
 	}
 
-	//TODO: Add own kweets
-	public List<Kweet> getMyFeedKweets(Profile profile) {
-		TypedQuery<Kweet> query =
-				entityManager.createNamedQuery("Kweet.getFeedKweets", Kweet.class);
-		return query.setParameter("owner", profile.getFollowing()).getResultList();
+	@Override
+	public List<Kweet> getMyFeedKweets(long profileId) {
+		List<Profile> following = profileDao.getFollowing(profileId);
+
+		List<Long> feedIds = new ArrayList<>();
+		feedIds.add(profileId);
+
+		for (Profile p : following){
+			feedIds.add(p.getId());
+		}
+
+		return kweetDao.getKweetsByIds(feedIds);
 	}
 
-	public void deleteKweet(Kweet kweet) {
-		entityManager.remove(kweet);
+	@Override
+	public void deleteKweet(long profileId, Kweet kweet, List<Permissions> permissions) {
+		kweetDao.deleteKweet(kweet);
 	}
 
-	public List<Kweet> getMyLast10Kweets() {
-		long myId= 0; //TODO: get Id from session
-		TypedQuery<Kweet> query =
-				entityManager.createNamedQuery("Kweet.getMyKweetsByDateDesc", Kweet.class)
-						.setMaxResults(10);
-		return query.setParameter("id", myId).getResultList();
+	@Override
+	public List<Kweet> getMyLast10Kweets(long profileId) {
+		return kweetDao.getMyLast10Kweets(profileId);
 	}
 }

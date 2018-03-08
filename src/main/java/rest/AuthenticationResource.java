@@ -1,7 +1,8 @@
 package rest;
 
 import entities.Profile;
-import filters.AuthenticationFilter.AuthenticatedProfile;
+import filters.AuthenticationFilter.IAuthenticatedUser;
+import model.AuthenticatedUser;
 import services.AuthenticationService;
 
 import javax.ejb.EJB;
@@ -17,8 +18,8 @@ public class AuthenticationResource {
 	AuthenticationService authenticationService;
 
 	@Inject
-	@AuthenticatedProfile
-	Profile authenticatedProfile;
+	@IAuthenticatedUser
+	AuthenticatedUser authenticatedUser;
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)

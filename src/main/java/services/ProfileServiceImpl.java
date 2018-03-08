@@ -1,58 +1,53 @@
 package services;
 
+import dao.ProfileDao;
 import entities.Profile;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.*;
 import java.util.List;
 
 @Stateless
-//TODO: Store own profileId in session
 public class ProfileServiceImpl implements ProfileService {
 
-	@PersistenceContext(name = "kwetterPU")
-	EntityManager entityManager;
+	@EJB
+	ProfileDao profileDao;
 
-	public void createProfile(Profile profile){
-		this.entityManager.persist(profile);
-		this.entityManager.flush();
+	@Override
+	public void createProfile(Profile profile) {
+		profileDao.createProfile(profile);
 	}
 
-	public void followProfile(Profile myProfile, Profile profileToFollow){
-		myProfile.getFollowing().add(profileToFollow);
-		entityManager.merge(myProfile);
+	@Override
+	public void updateUsername(Profile profile) {
+		profileDao.updateUsername(profile.getId(), profile.getUsername());
 	}
 
-	public void updateUsername(long profileId, String newName) {
-		Profile profile = entityManager.find(Profile.class, profileId);
-		profile.setUsername(newName);
-		entityManager.merge(profile);
+	@Override
+	public void followProfile(long profileId, Profile profileToFollow) {
+		profileDao.followProfile(
+				profileDao.getProfile(profileId),
+				profileToFollow);
 	}
 
-	public Profile getProfile(long profileId){
-		TypedQuery<Profile> query =
-				entityManager.createNamedQuery("Profile.getProfileById", Profile.class);
-		return query.setParameter("profileId", profileId).getSingleResult();
+	@Override
+	public Profile getProfile(long profileId) {
+		return profileDao.getProfile(profileId);
 	}
 
-	public List<Profile> getProfiles(String username) {
-		TypedQuery<Profile> query =
-				entityManager.createNamedQuery("Profile.getProfiles", Profile.class);
-		return query.setParameter("username", username).getResultList();
+	@Override
+	public List<Profile> getProfiles(String name) {
+		return profileDao.getProfiles(name);
 	}
 
-	//TODO: implement named query
+	@Override
 	public List<Profile> getFollowers(long profileId) {
-		TypedQuery<Profile> query =
-				entityManager.createNamedQuery("Profile.getFollowers", Profile.class);
-		return query.setParameter("id", profileId).getResultList();
+		return profileDao.getFollowers(profileId);
 	}
 
-	//TODO: implement named query
+	@Override
 	public List<Profile> getFollowing(long profileId) {
-		TypedQuery<Profile> query =
-				entityManager.createNamedQuery("Profile.getFollowing", Profile.class);
-		return query.setParameter("id", profileId).getResultList();
+		return profileDao.getFollowing(profileId);
 	}
-
 }

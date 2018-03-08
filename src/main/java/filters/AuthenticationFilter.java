@@ -1,12 +1,13 @@
 package filters;
 
 import entities.Profile;
+import enums.Permissions;
+import model.AuthenticatedUser;
 import services.AuthenticationService;
 import javax.annotation.Priority;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.inject.Qualifier;
-import javax.ws.rs.ForbiddenException;
 import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
@@ -18,6 +19,8 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Provider
@@ -30,11 +33,11 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 	@Qualifier
 	@Retention(value = RetentionPolicy.RUNTIME)
 	@Target({ ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER })
-	public @interface AuthenticatedProfile { }
+	public @interface IAuthenticatedUser { }
 
 	@Inject
-	@AuthenticatedProfile
-	Event<Profile> profileAuthenticatedEvent;
+	@IAuthenticatedUser
+	Event<AuthenticatedUser> userAuthenticatedEvent;
 
 	@Inject
 	AuthenticationService authenticationService;
@@ -45,20 +48,26 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 		String authorizationHeader =
 				containerRequestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
 
+		//Add this if request MUST have an authorization token.
+		/**
 		if (!isTokenBasedAuthentication(authorizationHeader)) {
 			abortWithUnauthorized(containerRequestContext);
 			return;
 		}
+		 **/
 
-		String token = authorizationHeader
+		AuthenticatedUser authenticatedUser;
+
+		if (authorizationHeader != null){
+		 String token = authorizationHeader
 				.substring(AUTHENTICATION_SCHEME.length()).trim();
-
-		try {
-			profileAuthenticatedEvent.fire(validateToken(token));
-
-		} catch (Exception e) {
-			abortWithUnauthorized(containerRequestContext);
+			authenticatedUser = createAuthenticatedUser(validateToken(token));
 		}
+		else{
+			authenticatedUser = createAuthenticatedUser(null);
+		}
+
+		userAuthenticatedEvent.fire(authenticatedUser);
 	}
 
 	private boolean isTokenBasedAuthentication(String authorizationHeader) {
@@ -66,22 +75,33 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 				.startsWith(AUTHENTICATION_SCHEME.toLowerCase() + " ");
 	}
 
-	private void abortWithUnauthorized(ContainerRequestContext requestContext) {
-
-		// Abort the filter chain with a 401 status code response
-		// The WWW-Authenticate header is sent along with the response
+	private void abortWithUnauthorized(ContainerRequestContext requestContext, Exception e) {
 		requestContext.abortWith(
 				Response.status(Response.Status.UNAUTHORIZED)
 						.header(HttpHeaders.WWW_AUTHENTICATE,
 								AUTHENTICATION_SCHEME + " realm=\"" + REALM + "\"")
 						.build());
+		requestContext.abortWith(Response.ok(e.toString()).build());
 	}
 
 	private Profile validateToken(String token) {
-		Profile profile = authenticationService.getProfileByToken(token);
+		return authenticationService.getProfileByToken(token);
+	}
+
+	private AuthenticatedUser createAuthenticatedUser(Profile profile){
+		AuthenticatedUser authenticatedUser = new AuthenticatedUser();
+
 		if (profile == null){
-			throw new ForbiddenException();
+			authenticatedUser.setId(-1);
+			List<Permissions> permissions = new ArrayList<>();
+			permissions.add(Permissions.GUEST);
+			authenticatedUser.setPermissions(permissions);
 		}
-		else return profile;
+		else{
+			authenticatedUser.setId(profile.getId());
+			authenticatedUser.setPermissions(profile.getPermission());
+		}
+
+		return authenticatedUser;
 	}
 }
