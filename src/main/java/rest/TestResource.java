@@ -1,7 +1,7 @@
 package rest;
 
 import filters.AuthenticationFilter.IAuthenticatedUser;
-import model.AuthenticatedUser;
+import security.AuthenticatedUser;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

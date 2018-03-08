@@ -9,6 +9,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.persistence:persistence-api:1.0.2" />
           <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.9" />
         </element>
       </element>
       <element id="directory" name="META-INF">

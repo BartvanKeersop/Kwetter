@@ -38,7 +38,8 @@ public class AuthenticationServiceImpl implements AuthenticationService{
 		random.nextBytes(bytes);
 		String token = Base64.getEncoder().encodeToString(bytes);
 
-		while (getProfileByToken(token) == null){
+		while (getProfileByToken(token) != null){
+			random.nextBytes(bytes);
 			token = Base64.getEncoder().encodeToString(bytes);
 		}
 

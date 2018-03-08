@@ -2,7 +2,7 @@ package rest;
 
 import entities.Profile;
 import filters.AuthenticationFilter.IAuthenticatedUser;
-import model.AuthenticatedUser;
+import security.AuthenticatedUser;
 import services.AuthenticationService;
 
 import javax.ejb.EJB;

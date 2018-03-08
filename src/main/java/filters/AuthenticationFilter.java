@@ -1,8 +1,8 @@
 package filters;
 
 import entities.Profile;
-import enums.Permissions;
-import model.AuthenticatedUser;
+import security.Permissions;
+import security.AuthenticatedUser;
 import services.AuthenticationService;
 import javax.annotation.Priority;
 import javax.enterprise.event.Event;

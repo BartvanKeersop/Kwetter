@@ -1,10 +1,5 @@
-package model;
+package security;
 
-import enums.Permissions;
-
-import javax.enterprise.inject.Model;
-import javax.faces.bean.RequestScoped;
-import java.io.Serializable;
 import java.util.List;
 
 public class AuthenticatedUser {

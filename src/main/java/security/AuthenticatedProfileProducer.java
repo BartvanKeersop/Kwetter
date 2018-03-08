@@ -1,4 +1,4 @@
-package model;
+package security;
 
 import filters.AuthenticationFilter.IAuthenticatedUser;
 import javax.enterprise.context.RequestScoped;
@@ -10,7 +10,7 @@ public class AuthenticatedProfileProducer{
 
 	@Produces
 	@IAuthenticatedUser
-	private model.AuthenticatedUser authenticatedUser;
+	private security.AuthenticatedUser authenticatedUser;
 
 	public void handleAuthenticationEvent(@Observes @IAuthenticatedUser AuthenticatedUser authenticatedUser) {
 		this.authenticatedUser = authenticatedUser;

@@ -1,8 +1,7 @@
 package services;
 
 import entities.Kweet;
-import entities.Profile;
-import enums.Permissions;
+import security.Permissions;
 
 import java.util.List;
 

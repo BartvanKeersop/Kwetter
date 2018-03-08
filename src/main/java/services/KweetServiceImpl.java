@@ -4,13 +4,10 @@ import dao.KweetDao;
 import dao.ProfileDao;
 import entities.Kweet;
 import entities.Profile;
-import enums.Permissions;
+import security.Permissions;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 

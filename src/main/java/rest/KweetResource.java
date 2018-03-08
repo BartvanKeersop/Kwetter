@@ -2,7 +2,7 @@ package rest;
 
 import entities.Kweet;
 import filters.AuthenticationFilter.IAuthenticatedUser;
-import model.AuthenticatedUser;
+import security.AuthenticatedUser;
 import services.KweetService;
 
 import javax.ejb.EJB;
