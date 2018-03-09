@@ -7,7 +7,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -21,9 +20,14 @@ public class ProfileDaoImpl implements ProfileDao {
 		this.entityManager.flush();
 	}
 
+	public void updateProfile(Profile profile) {
+		entityManager.merge(profile);
+	}
+
 	public void followProfile(Profile myProfile, Profile profileToFollow){
 		myProfile.getFollowing().add(profileToFollow);
 		entityManager.merge(myProfile);
+		entityManager.flush();
 	}
 
 	public void updateUsername(long profileId, String newName) {
@@ -44,15 +48,24 @@ public class ProfileDaoImpl implements ProfileDao {
 		return query.setParameter("username", username).getResultList();
 	}
 
-	//TODO: implement named query
 	public List<Profile> getFollowers(long profileId) {
-		TypedQuery<Profile> query =
-				entityManager.createNamedQuery("Profile.getFollowers", Profile.class);
-		return query.setParameter("id", profileId).getResultList();
+		Query q = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile " +
+						"WHERE id IN " +
+						"(SELECT kwetter_db.follow.follower_id " +
+						"FROM kwetter_db.follow " +
+						"WHERE kwetter_db.follow.following_id = ?)",
+				"ProfileMapping");
+		q.setParameter(1, profileId);
+		return (List<Profile>) q.getResultList();
 	}
 
 	public List<Profile> getFollowing(long profileId) {
-		Query q = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile p WHERE id IN (SELECT kwetter_db.profile_following.following_id FROM kwetter_db.profile_following WHERE kwetter_db.profile_following.profile_id = ?)", "ProfileMapping");
+		Query q = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile " +
+				"WHERE id IN " +
+				"(SELECT kwetter_db.follow.following_id " +
+				"FROM kwetter_db.follow " +
+				"WHERE kwetter_db.follow.follower_id = ?)",
+				"ProfileMapping");
 		q.setParameter(1, profileId);
 		return (List<Profile>) q.getResultList();
 	}

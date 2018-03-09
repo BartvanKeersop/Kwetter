@@ -16,8 +16,6 @@ import java.util.List;
 				query="SELECT p FROM Profile p WHERE p.email = :email AND p.password = :password"),
 		@NamedQuery(name="Profile.getProfileByToken",
 				query="SELECT p FROM Profile p WHERE p.token = :token"),
-		@NamedQuery(name="Profile.getFollowers",
-				query="SELECT p.followers FROM Profile p WHERE p.id = :id"),
 })
 @SqlResultSetMapping(
 		name = "ProfileMapping",
@@ -54,6 +52,7 @@ public class Profile implements Serializable {
 	@JoinTable
 	private List<Kweet> kweets;
 
+	/*
 	@OneToMany
 	@JoinTable(
 			name = "profile_followers",
@@ -67,12 +66,13 @@ public class Profile implements Serializable {
 					nullable = false))
 	@JsonIgnore
 	private List<Profile> followers;
+	*/
 
-	@OneToMany
+	@ManyToMany
 	@JoinTable(
-			name = "profile_following",
+			name = "follow",
 			joinColumns = @JoinColumn(
-					name = "profile_id",
+					name = "follower_id",
 					referencedColumnName = "id",
 					nullable = false),
 			inverseJoinColumns = @JoinColumn(
@@ -149,6 +149,7 @@ public class Profile implements Serializable {
 		this.kweets = kweets;
 	}
 
+	/*
 	public List<Profile> getFollowers() {
 		return followers;
 	}
@@ -156,6 +157,7 @@ public class Profile implements Serializable {
 	public void setFollowers(List<Profile> followers) {
 		this.followers = followers;
 	}
+	*/
 
 	public List<Profile> getFollowing() {
 		return following;

@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface ProfileDao {
 	void createProfile(Profile profile);
+	void updateProfile(Profile profile);
 	void updateUsername(long profileId, String newName);
 	void followProfile(Profile myProfile , Profile profileToFollow);
 	Profile getProfile(long profileId);

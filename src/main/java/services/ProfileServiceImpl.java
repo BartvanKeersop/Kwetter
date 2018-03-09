@@ -3,9 +3,13 @@ package services;
 import dao.ProfileDao;
 import entities.Profile;
 import dto.ProfileDto;
+import filters.AuthenticationFilter.IAuthenticatedUser;
+import security.AuthenticatedUser;
+import security.Permissions;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +19,28 @@ public class ProfileServiceImpl implements ProfileService {
 	@EJB
 	ProfileDao profileDao;
 
+	@Inject
+	@IAuthenticatedUser
+	AuthenticatedUser authenticatedUser;
+
+	@Override
+	public void updateProfile(ProfileDto profileDto) {
+		Profile updatedProfile = getProfile(authenticatedUser.getId());
+
+		updatedProfile.setUsername(profileDto.getUsername());
+		updatedProfile.setEmail(profileDto.getEmail());
+		updatedProfile.setBiography(profileDto.getBiography());
+		updatedProfile.setWebsite(profileDto.getWebsite());
+		updatedProfile.setLocation(profileDto.getLocation());
+
+		profileDao.updateProfile(updatedProfile);
+	}
+
 	@Override
 	public void createProfile(Profile profile) {
+		List<Permissions> permissions = new ArrayList<>();
+		permissions.add(Permissions.USER);
+		profile.setPermission(permissions);
 		profileDao.createProfile(profile);
 	}
 
@@ -26,10 +50,11 @@ public class ProfileServiceImpl implements ProfileService {
 	}
 
 	@Override
-	public void followProfile(long profileId, Profile profileToFollow) {
+	public void followProfile(long myProfileId, long profileToFollowId) {
 		profileDao.followProfile(
-				profileDao.getProfile(profileId),
-				profileToFollow);
+				profileDao.getProfile(myProfileId),
+				profileDao.getProfile(profileToFollowId));
+
 	}
 
 	@Override

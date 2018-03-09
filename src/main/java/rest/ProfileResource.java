@@ -1,5 +1,6 @@
 package rest;
 
+import dto.ProfileDto;
 import entities.Profile;
 import filters.AuthenticationFilter.IAuthenticatedUser;
 import security.AuthenticatedUser;
@@ -47,11 +48,24 @@ public class ProfileResource {
 	}
 
 	@POST
+	@Path("/editProfile")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response updateProfile(ProfileDto profileDto){
+		try{
+			profileService.updateProfile(profileDto);
+			return Response.ok().build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@POST
 	@Path("/followProfile")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response followProfile(Profile profileToFollow){
 		try{
-			profileService.followProfile(authenticatedUser.getId(), profileToFollow);
+			profileService.followProfile(authenticatedUser.getId(), profileToFollow.getId());
 			return Response.ok().build();
 		}
 		catch(Exception e){

@@ -7,30 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6414ec-9854-45de-aaaf-fe729313e501" name="Default" comment="testcommit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dto/ProfileDto.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Kwetter_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/enums/Roles.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/ProfileServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dto/KweetDto.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/rest/AdministratorResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/rest/ModeratorResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDao.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Kweet.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Kweet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileService.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileServiceImpl.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ProfileDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/ProfileDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ProfileDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/ProfileDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entities/Kweet.class" afterPath="$PROJECT_DIR$/target/classes/entities/Kweet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entities/Profile.class" afterPath="$PROJECT_DIR$/target/classes/entities/Profile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rest/ProfileResource.class" afterPath="$PROJECT_DIR$/target/classes/rest/ProfileResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Kwetter_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Kwetter_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services/ProfileService.class" afterPath="$PROJECT_DIR$/target/classes/services/ProfileService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services/ProfileServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/services/ProfileServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Kwetter.iml" afterPath="$PROJECT_DIR$/Kwetter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entities/Kweet.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Kweet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entities/Profile.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Profile.java" />
@@ -49,6 +42,29 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Kwetter$JBossKwetter.coverage" NAME="JBossKwetter Coverage Results" MODIFIED="1519673421418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="ProfileDto.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="578">
+                    <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+                    <folding>
+                      <element signature="e#806#807#0" expanded="true" />
+                      <element signature="e#837#838#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="autoscrollToSource" value="true" />
     <option name="hideWarnings" value="true" />
@@ -56,7 +72,94 @@
     <option name="HIDE_WARNINGS" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Profile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="67" column="93" lean-forward="false" selection-start-line="67" selection-start-column="93" selection-end-line="67" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" column="84" lean-forward="false" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#579#580#0" expanded="true" />
+                <marker date="1520623232705" expanded="true" signature="1514:1547" ph="SELECT * FRO... profile" />
+                <marker date="1520623232705" expanded="true" signature="1514:1705" ph="SELECT * FRO... profile" />
+                <marker date="1520623232705" expanded="true" signature="1582:1704" ph="SELECT kwett... follow" />
+                <marker date="1520623232705" expanded="true" signature="1697:1704" ph="SELECT kwett... profile_follower" />
+                <marker date="1520623232705" expanded="true" signature="1909:2092" ph="SELECT * FRO... profile" />
+                <marker date="1520623232705" expanded="true" signature="1973:2091" ph="SELECT kwett... profile_following" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kweet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Kweet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="55" column="58" lean-forward="false" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/main/java/filters/NameBindings.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/AuthenticatedUserProducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/KweetDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/enums/Roles.java" />
         <option value="$PROJECT_DIR$/src/main/java/enums/Permissions.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/AuthenticatedProfileProducer.java" />
@@ -110,26 +212,30 @@
         <option value="$PROJECT_DIR$/src/main/java/services/KweetService.java" />
         <option value="$PROJECT_DIR$/src/main/java/filters/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/AuthenticatedUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/security/AuthenticatedUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/security/Permissions.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AuthenticationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Kweet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ProfileMapping.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/Profile.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" />
+        <option value="$PROJECT_DIR$/src/main/java/model/SecureProfile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dto/ProfileDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dto/KweetDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Kweet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/AdministratorResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/ModeratorResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ProfileService.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Profile.java" />
-        <option value="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/SecureProfile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ProfileService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dto/ProfileDto.java" />
       </list>
     </option>
   </component>
@@ -307,12 +413,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -782,15 +882,16 @@
       <workItem from="1520599863555" duration="5721000" />
       <workItem from="1520605620689" duration="333000" />
       <workItem from="1520605976812" duration="100000" />
-      <workItem from="1520606249415" duration="3383000" />
+      <workItem from="1520606249415" duration="10735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137702000" />
+    <option name="totallyTimeSpent" value="145054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.38697916" order="7" side_tool="true" content_ui="tabs" />
@@ -812,7 +913,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.61302084" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.61302084" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -879,22 +980,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KwetterApplication.java" />
-    <entry file="file://$PROJECT_DIR$/Kwetter.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -943,46 +1028,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/filters/NameBindings.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/enums/Roles.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="81" lean-forward="true" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#936#937#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="42" column="87" lean-forward="false" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -1000,13 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KwetterApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rest/TestResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1018,14 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Kweet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1087,50 +1118,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="68" lean-forward="false" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-459">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#5033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520607905362" expanded="true" signature="1690:1871" ph="SELECT * FRO... profile" />
-            <marker date="1520607905362" expanded="true" signature="1738:1870" ph="SELECT kwett... profile_following" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="82" column="36" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="82" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1160,11 +1153,11 @@
         <state relative-caret-position="408">
           <caret line="57" column="65" lean-forward="false" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="65" />
           <folding>
-            <marker date="1520608997847" expanded="true" signature="1959:1966" ph="SELECT p.id,... profile" />
-            <marker date="1520608997847" expanded="true" signature="1959:2139" ph="SELECT FROM profile" />
-            <marker date="1520608997847" expanded="true" signature="1959:2219" ph="SELECT p.id,... profile" />
-            <marker date="1520608997847" expanded="true" signature="2004:2136" ph="SELECT kwett... profile_following" />
-            <marker date="1520608997847" expanded="true" signature="2158:2216" ph="SELECT kwett... profile_following" />
+            <marker date="1520623259340" expanded="true" signature="2244:2251" ph="SELECT p.id,... profile" />
+            <marker date="1520623259340" expanded="true" signature="2350:2357" ph="SELECT FROM profile" />
+            <marker date="1520623259340" expanded="true" signature="2350:2437" ph="SELECT p.id,... profile" />
+            <marker date="1520623259340" expanded="true" signature="2350:2354" ph="SELECT kwett... profile_following" />
+            <marker date="1520623259340" expanded="true" signature="2376:2434" ph="SELECT kwett... profile_following" />
           </folding>
         </state>
       </provider>
@@ -1177,51 +1170,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        <state relative-caret-position="119">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="e#381#382#0" expanded="false" />
+            <element signature="e#416#417#0" expanded="false" />
+            <element signature="e#683#684#0" expanded="false" />
+            <element signature="e#717#718#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/KweetDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="65" column="36" lean-forward="false" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ModeratorResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AdministratorResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KwetterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="153">
+          <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="419">
+          <caret line="55" column="58" lean-forward="false" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
           <folding>
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="67" column="93" lean-forward="false" selection-start-line="67" selection-start-column="93" selection-end-line="67" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="84" lean-forward="false" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <marker date="1520623232705" expanded="true" signature="1514:1547" ph="SELECT * FRO... profile" />
+            <marker date="1520623232705" expanded="true" signature="1514:1705" ph="SELECT * FRO... profile" />
+            <marker date="1520623232705" expanded="true" signature="1582:1704" ph="SELECT kwett... follow" />
+            <marker date="1520623232705" expanded="true" signature="1697:1704" ph="SELECT kwett... profile_follower" />
+            <marker date="1520623232705" expanded="true" signature="1909:2092" ph="SELECT * FRO... profile" />
+            <marker date="1520623232705" expanded="true" signature="1973:2091" ph="SELECT kwett... profile_following" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Kweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

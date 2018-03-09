@@ -113,4 +113,3 @@ public class Kweet implements Serializable {
 		this.id = id;
 	}
 }
-
