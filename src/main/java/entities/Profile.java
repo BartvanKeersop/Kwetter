@@ -1,7 +1,6 @@
 package entities;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import security.Permissions;
 import javax.persistence.*;
 import java.io.Serializable;
@@ -13,15 +12,26 @@ import java.util.List;
 				query="SELECT p FROM Profile p WHERE p.id = :profileId"),
 		@NamedQuery(name="Profile.getProfiles",
 				query="SELECT p FROM Profile p WHERE p.username LIKE :username"),
-		@NamedQuery(name="Profile.getFollowers",
-				query="SELECT p.followers FROM Profile p"),
-		@NamedQuery(name="Profile.getFollowing",
-				query="SELECT p.following FROM Profile p"),
 		@NamedQuery(name="Profile.authenticate",
 				query="SELECT p FROM Profile p WHERE p.email = :email AND p.password = :password"),
 		@NamedQuery(name="Profile.getProfileByToken",
 				query="SELECT p FROM Profile p WHERE p.token = :token"),
+		@NamedQuery(name="Profile.getFollowers",
+				query="SELECT p.followers FROM Profile p WHERE p.id = :id"),
 })
+@SqlResultSetMapping(
+		name = "ProfileMapping",
+		entities = @EntityResult(
+				entityClass = Profile.class,
+				fields = {
+						@FieldResult(name = "id", column = "id"),
+						@FieldResult(name = "biography", column = "biography"),
+						@FieldResult(name = "email", column = "email"),
+						@FieldResult(name = "location", column = "location"),
+						@FieldResult(name = "password", column = "password"),
+						@FieldResult(name = "token", column = "token"),
+						@FieldResult(name = "username", column = "username"),
+						@FieldResult(name = "website", column = "website")}))
 public class Profile implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,18 +49,37 @@ public class Profile implements Serializable {
 	private String website;
 	private String location;
 	private String token;
+
 	@OneToMany
 	@JoinTable
 	private List<Kweet> kweets;
+
 	@OneToMany
-	@JoinTable(name = "profile_followers"
-			, joinColumns = @JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false)
-			, inverseJoinColumns = @JoinColumn(name = "follower_id", referencedColumnName = "id", nullable = false))
+	@JoinTable(
+			name = "profile_followers",
+			joinColumns = @JoinColumn(
+					name = "profile_id",
+					referencedColumnName = "id",
+					nullable = false),
+			inverseJoinColumns = @JoinColumn(
+					name = "follower_id",
+					referencedColumnName = "id",
+					nullable = false))
+	@JsonIgnore
 	private List<Profile> followers;
+
 	@OneToMany
-	@JoinTable(name = "profile_following"
-			, joinColumns = @JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false)
-			, inverseJoinColumns = @JoinColumn(name = "following_id", referencedColumnName = "id", nullable = false))
+	@JoinTable(
+			name = "profile_following",
+			joinColumns = @JoinColumn(
+					name = "profile_id",
+					referencedColumnName = "id",
+					nullable = false),
+			inverseJoinColumns = @JoinColumn(
+					name = "following_id",
+					referencedColumnName = "id",
+					nullable = false))
+	@JsonIgnore
 	private List<Profile> following;
 
 	public Profile(){

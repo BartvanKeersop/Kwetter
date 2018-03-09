@@ -5,7 +5,9 @@ import entities.Profile;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -49,10 +51,9 @@ public class ProfileDaoImpl implements ProfileDao {
 		return query.setParameter("id", profileId).getResultList();
 	}
 
-	//TODO: implement named query
 	public List<Profile> getFollowing(long profileId) {
-		TypedQuery<Profile> query =
-				entityManager.createNamedQuery("Profile.getFollowing", Profile.class);
-		return query.setParameter("id", profileId).getResultList();
+		Query q = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile p WHERE id IN (SELECT kwetter_db.profile_following.following_id FROM kwetter_db.profile_following WHERE kwetter_db.profile_following.profile_id = ?)", "ProfileMapping");
+		q.setParameter(1, profileId);
+		return (List<Profile>) q.getResultList();
 	}
 }

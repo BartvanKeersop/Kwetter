@@ -2,10 +2,11 @@ package services;
 
 import dao.ProfileDao;
 import entities.Profile;
+import dto.ProfileDto;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
-import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -42,12 +43,22 @@ public class ProfileServiceImpl implements ProfileService {
 	}
 
 	@Override
-	public List<Profile> getFollowers(long profileId) {
-		return profileDao.getFollowers(profileId);
+	public List<ProfileDto> getFollowers(long profileId) {
+		List<ProfileDto> profileDtos = new ArrayList<>();
+
+		for(Profile p : profileDao.getFollowers(profileId)){
+			profileDtos.add(new ProfileDto(p));
+		}
+		return profileDtos;
 	}
 
 	@Override
-	public List<Profile> getFollowing(long profileId) {
-		return profileDao.getFollowing(profileId);
+	public List<ProfileDto> getFollowing(long profileId) {
+		List<ProfileDto> profileDtos = new ArrayList<>();
+
+		for(Profile p : profileDao.getFollowing(profileId)){
+			profileDtos.add(new ProfileDto(p));
+		}
+		return profileDtos;
 	}
 }

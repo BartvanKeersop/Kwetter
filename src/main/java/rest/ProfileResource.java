@@ -99,12 +99,12 @@ public class ProfileResource {
 	}
 
 	@GET
-	@Path("/getFollowers/{profileId}")
+	@Path("/getFollowing/{profileId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getFollowing(@PathParam("profileId") long profileId){
 		try{
-			return Response.ok(
-					profileService.getFollowing(profileId)).build();
+			return Response.ok(profileService.getFollowing(profileId)).build();
+
 		}
 		catch(Exception e){
 			return Response.serverError().build();

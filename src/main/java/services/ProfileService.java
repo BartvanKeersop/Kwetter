@@ -1,5 +1,6 @@
 package services;
 
+import dto.ProfileDto;
 import entities.Profile;
 import javax.ejb.Local;
 import java.util.List;
@@ -11,6 +12,6 @@ public interface ProfileService {
 	void followProfile(long profileId, Profile profileToFollow);
 	Profile getProfile(long profileId);
 	List<Profile> getProfiles(String name);
-	List<Profile> getFollowers(long profileId);
-	List<Profile> getFollowing(long profileId);
+	List<ProfileDto> getFollowers(long profileId);
+	List<ProfileDto> getFollowing(long profileId);
 }

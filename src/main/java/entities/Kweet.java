@@ -1,5 +1,7 @@
 package entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -23,9 +25,33 @@ public class Kweet implements Serializable {
 	private Profile owner;
 	@ElementCollection
 	private List<String> hashtags;
+
 	@OneToMany
+	@JoinTable(
+			name = "kweet_mentions",
+			joinColumns = @JoinColumn(
+					name = "profile_id",
+					referencedColumnName = "id",
+					nullable = false),
+			inverseJoinColumns = @JoinColumn(
+					name = "mention_id",
+					referencedColumnName = "id",
+					nullable = false))
+	@JsonIgnore
 	private List<Profile> mentions;
+
 	@OneToMany
+	@JoinTable(
+			name = "kweet_likedby",
+			joinColumns = @JoinColumn(
+					name = "profile_id",
+					referencedColumnName = "id",
+					nullable = false),
+			inverseJoinColumns = @JoinColumn(
+					name = "kweet_id",
+					referencedColumnName = "id",
+					nullable = false))
+	@JsonIgnore
 	private List<Profile> likedBy;
 
 	public Kweet(){
