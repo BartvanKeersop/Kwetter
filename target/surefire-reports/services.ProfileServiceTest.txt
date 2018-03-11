@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: services.ProfileServiceTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 20.425 sec <<< FAILURE! - in services.ProfileServiceTest
+testGetFollowers(services.ProfileServiceTest)  Time elapsed: 0.067 sec  <<< FAILURE!
+java.lang.AssertionError
+	at services.ProfileServiceTest.testGetFollowers(ProfileServiceTest.java:92)
+

@@ -7,9 +7,9 @@ import java.util.List;
 
 @Local
 public interface ProfileService {
+	String test();
 	void updateProfile(ProfileDto profile);
 	void createProfile(Profile profile);
-	void updateUsername(Profile profile);
 	void followProfile(long profileId, long profileToFollowId);
 	Profile getProfile(long profileId);
 	List<Profile> getProfiles(String name);

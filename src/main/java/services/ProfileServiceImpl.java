@@ -23,6 +23,10 @@ public class ProfileServiceImpl implements ProfileService {
 	@IAuthenticatedUser
 	AuthenticatedUser authenticatedUser;
 
+	public String test(){
+		return "Hello world";
+	}
+
 	@Override
 	public void updateProfile(ProfileDto profileDto) {
 		Profile updatedProfile = getProfile(authenticatedUser.getId());
@@ -42,11 +46,6 @@ public class ProfileServiceImpl implements ProfileService {
 		permissions.add(Permissions.USER);
 		profile.setPermission(permissions);
 		profileDao.createProfile(profile);
-	}
-
-	@Override
-	public void updateUsername(Profile profile) {
-		profileDao.updateUsername(profile.getId(), profile.getUsername());
 	}
 
 	@Override

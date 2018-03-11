@@ -7,25 +7,121 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6414ec-9854-45de-aaaf-fe729313e501" name="Default" comment="testcommit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dto/KweetDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/rest/AdministratorResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/rest/ModeratorResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDao.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileService.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileServiceImpl.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ProfileDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/ProfileDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ProfileDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/ProfileDaoImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Kwetter_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_enterprise_cdi_api_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jws_jsr181_api_1_0_MR1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_config_arquillian_config_api_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_config_arquillian_config_impl_base_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_container_arquillian_container_impl_base_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_container_arquillian_container_spi_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_container_arquillian_container_test_api_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_container_arquillian_container_test_impl_base_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_container_arquillian_container_test_spi_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_core_arquillian_core_api_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_core_arquillian_core_impl_base_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_core_arquillian_core_spi_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_junit_arquillian_junit_container_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_junit_arquillian_junit_core_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_test_arquillian_test_api_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_test_arquillian_test_impl_base_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_test_arquillian_test_spi_1_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_arquillian_testenricher_arquillian_testenricher_osgi_2_1_0_CR2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_4_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_1_4_9_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_river_1_4_9_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_osgi_metadata_jbosgi_metadata_3_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_remoting_jboss_remoting_4_0_7_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_remotingjmx_remoting_jmx_2_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_sasl_jboss_sasl_1_0_4_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_descriptors_shrinkwrap_descriptors_api_base_2_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_descriptors_shrinkwrap_descriptors_spi_2_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_api_1_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_impl_base_1_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_shrinkwrap_shrinkwrap_spi_1_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_annotation_jboss_annotations_api_1_2_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_batch_jboss_batch_api_1_0_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_ejb_jboss_ejb_api_3_2_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_el_jboss_el_api_3_0_spec_1_0_4_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_enterprise_concurrent_jboss_concurrency_api_1_0_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_faces_jboss_jsf_api_2_2_spec_2_2_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_interceptor_jboss_interceptors_api_1_2_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_jms_jboss_jms_api_2_0_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_json_jboss_json_api_1_0_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_management_j2ee_jboss_j2eemgmt_api_1_1_spec_1_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_resource_jboss_connector_api_1_7_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_rmi_jboss_rmi_api_1_0_spec_1_0_4_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_security_auth_message_jboss_jaspi_api_1_1_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_security_jacc_jboss_jacc_api_1_5_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_servlet_jboss_servlet_api_3_1_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_servlet_jsp_jboss_jsp_api_2_3_spec_1_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_servlet_jstl_jboss_jstl_api_1_2_spec_1_1_2_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_websocket_jboss_websocket_api_1_1_spec_1_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_ws_rs_jboss_jaxrs_api_2_0_spec_1_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_xml_bind_jboss_jaxb_api_2_2_spec_1_0_4_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_xml_soap_jboss_saaj_api_1_3_spec_1_0_3_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_xml_ws_jboss_jaxws_api_2_2_spec_2_0_2_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_xnio_xnio_api_3_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_xnio_xnio_nio_3_3_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_osgi_org_osgi_core_5_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_wildfly_wildfly_arquillian_common_8_2_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_wildfly_wildfly_arquillian_container_managed_8_2_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_wildfly_wildfly_arquillian_protocol_jmx_8_2_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_wildfly_wildfly_arquillian_testenricher_msc_8_2_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_wildfly_wildfly_dist_11_0_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_wildfly_wildfly_jmx_8_2_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/services/ProfileServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/arquillian.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/KweetDto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/ProfileDto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Kweet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/filters/AuthenticationFilter$IAuthenticatedUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/filters/AuthenticationFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/AdministratorResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/AuthenticationResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/KweetResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/KwetterApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ModeratorResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/TestResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/security/AuthenticatedProfileProducer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/security/AuthenticatedUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/security/Permissions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/AuthenticationService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/AuthenticationServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/KweetService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/KweetServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/lib/jackson-annotations-2.8.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/lib/javax.ws.rs-api-2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/lib/persistence-api-1.0.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Kwetter/index.jsp" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entities/Profile.class" afterPath="$PROJECT_DIR$/target/classes/entities/Profile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rest/ProfileResource.class" afterPath="$PROJECT_DIR$/target/classes/rest/ProfileResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services/ProfileService.class" afterPath="$PROJECT_DIR$/target/classes/services/ProfileService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services/ProfileServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/services/ProfileServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Kwetter_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Kwetter_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entities/Kweet.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Kweet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Kwetter.iml" afterPath="$PROJECT_DIR$/Kwetter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entities/Profile.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Profile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" afterPath="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/ProfileService.java" afterPath="$PROJECT_DIR$/src/main/java/services/ProfileService.java" />
@@ -40,30 +136,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Kwetter$Wildfly__ProfileServiceTest.coverage" NAME="Wildfly: ProfileServiceTest Coverage Results" MODIFIED="1520680895034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Kwetter$JBossKwetter.coverage" NAME="JBossKwetter Coverage Results" MODIFIED="1519673421418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="ProfileDto.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="578">
-                    <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-                    <folding>
-                      <element signature="e#806#807#0" expanded="true" />
-                      <element signature="e#837#838#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="autoscrollToSource" value="true" />
@@ -73,11 +147,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Profile.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+            <state relative-caret-position="2210">
+              <caret line="130" column="26" lean-forward="false" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test-persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/test-persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arquillian.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/arquillian.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileServiceTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/services/ProfileServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="845">
+              <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,72 +212,18 @@
       <file leaf-file-name="ProfileResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="67" column="93" lean-forward="false" selection-start-line="67" selection-start-column="93" selection-end-line="67" selection-end-column="93" />
+            <state relative-caret-position="425">
+              <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java">
+      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="84" lean-forward="false" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <marker date="1520623232705" expanded="true" signature="1514:1547" ph="SELECT * FRO... profile" />
-                <marker date="1520623232705" expanded="true" signature="1514:1705" ph="SELECT * FRO... profile" />
-                <marker date="1520623232705" expanded="true" signature="1582:1704" ph="SELECT kwett... follow" />
-                <marker date="1520623232705" expanded="true" signature="1697:1704" ph="SELECT kwett... profile_follower" />
-                <marker date="1520623232705" expanded="true" signature="1909:2092" ph="SELECT * FRO... profile" />
-                <marker date="1520623232705" expanded="true" signature="1973:2091" ph="SELECT kwett... profile_following" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kweet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Kweet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="55" column="58" lean-forward="false" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+            <state relative-caret-position="1190">
+              <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -173,6 +243,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>error</find>
+      <find>ee</find>
+      <find>jboss</find>
+      <find>jboss-as-arquillian-container-managed</find>
+      <find>transa</find>
+      <find>core</find>
+      <find>bom</find>
+      <find>1.3.0</find>
+      <find>p4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,14 +264,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/rest/userApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/UserApi.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/TESTCLASS.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/module.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
@@ -220,8 +290,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ProfileMapping.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/Profile.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" />
         <option value="$PROJECT_DIR$/src/main/java/model/SecureProfile.java" />
         <option value="$PROJECT_DIR$/src/main/java/dto/ProfileDto.java" />
@@ -231,11 +299,22 @@
         <option value="$PROJECT_DIR$/src/main/java/rest/AdministratorResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/ModeratorResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/META-INF/test-persistence.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/META-INF/jbossas-ds.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/testClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/services/testClassTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/services/TestClassXTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/arquillian.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/test-persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Profile.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/ProfileService.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Profile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/services/ProfileServiceTest.java" />
       </list>
     </option>
   </component>
@@ -260,7 +339,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="920" />
+    <option name="x" value="269" />
+    <option name="y" value="3" />
     <option name="width" value="1003" />
     <option name="height" value="1047" />
   </component>
@@ -300,9 +380,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,47 +411,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="filters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -403,83 +440,42 @@
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,6 +488,22 @@
     <property name="jdk.selected.JAVA_MODULE" value="8" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../MavenTest" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Github\Kwetter\src\test\resources\META-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Github\Kwetter\src\test\resources" />
+      <recent name="C:\Github\Kwetter\src\test\resources\resources-jbossas-managed" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -651,6 +663,36 @@
         </option>
         <option name="MakeProject" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ProfileServiceTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Kwetter" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.ProfileServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="WildflyRemote" type="Remote" factoryName="Remote" show_console_on_std_out="true" show_console_on_std_err="true">
       <module name="Kwetter" />
@@ -840,15 +882,17 @@
       </RunnerSettings>
     </configuration>
     <configuration name="index.jsp" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Kwetter/index.jsp" />
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="GlassFish Server.GlassFishKwetter" />
       <item index="1" class="java.lang.String" itemvalue="JBoss Server.JBossKwetter" />
       <item index="2" class="java.lang.String" itemvalue="Remote.WildflyRemote" />
       <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.jsp" />
+      <item index="4" class="java.lang.String" itemvalue="Arquillian JUnit.ProfileServiceTest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.jsp" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Arquillian JUnit.ProfileServiceTest" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -882,12 +926,28 @@
       <workItem from="1520599863555" duration="5721000" />
       <workItem from="1520605620689" duration="333000" />
       <workItem from="1520605976812" duration="100000" />
-      <workItem from="1520606249415" duration="10735000" />
+      <workItem from="1520606249415" duration="17738000" />
+      <workItem from="1520681078359" duration="29284000" />
+      <workItem from="1520797685027" duration="1782000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Wildfly__ProfileServiceTest - 2018.03.10 at 12h 21m 37s.xml">
+      <configuration name="Wildfly: ProfileServiceTest" configurationId="ArquillianJUnit" />
+    </history-entry>
+    <history-entry file="Wildfly__ProfileServiceTest - 2018.03.10 at 12h 25m 37s.xml">
+      <configuration name="Wildfly: ProfileServiceTest" configurationId="ArquillianJUnit" />
+    </history-entry>
+    <history-entry file="Wildfly__ProfileServiceTest - 2018.03.10 at 12h 33m 16s.xml">
+      <configuration name="Wildfly: ProfileServiceTest" configurationId="ArquillianJUnit" />
+    </history-entry>
+    <history-entry file="Wildfly__ProfileServiceTest - 2018.03.10 at 12h 34m 48s.xml">
+      <configuration name="Wildfly: ProfileServiceTest" configurationId="ArquillianJUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145054000" />
+    <option name="totallyTimeSpent" value="183123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -907,13 +967,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.38020834" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15058325" sideWeight="0.38020834" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32873806" sideWeight="0.61302084" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.61302084" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -926,7 +986,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -980,33 +1040,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kwetter.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserApi.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/TESTCLASS.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/persistence.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/services/UserServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/services/UserService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/module.xml" />
@@ -1015,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,7 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,9 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,7 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,7 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1089,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="97" column="58" lean-forward="false" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,78 +1127,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="26" lean-forward="false" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="106" column="31" lean-forward="true" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#5033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileServiceImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#1281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#538#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="57" column="65" lean-forward="false" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="65" />
-          <folding>
-            <marker date="1520623259340" expanded="true" signature="2244:2251" ph="SELECT p.id,... profile" />
-            <marker date="1520623259340" expanded="true" signature="2350:2357" ph="SELECT FROM profile" />
-            <marker date="1520623259340" expanded="true" signature="2350:2437" ph="SELECT p.id,... profile" />
-            <marker date="1520623259340" expanded="true" signature="2350:2354" ph="SELECT kwett... profile_following" />
-            <marker date="1520623259340" expanded="true" signature="2376:2434" ph="SELECT kwett... profile_following" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="62" lean-forward="false" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" />
+    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" />
+    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileServiceImpl.class" />
+    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/ProfileService.class" />
+    <entry file="file://$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/ProfileDaoImpl.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,12 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#416#417#0" expanded="false" />
-            <element signature="e#683#684#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1195,9 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,20 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="65" column="36" lean-forward="false" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1234,19 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AdministratorResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,7 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1262,7 +1186,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Kweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="e#806#807#0" expanded="false" />
+            <element signature="e#837#838#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AdministratorResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="51" column="84" lean-forward="false" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1270,68 +1228,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TestClassX.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestClassXTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/resources-jbossas-managed/jbossas-ds.xml" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/arquillian.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        <state relative-caret-position="238">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/test-persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="55" column="58" lean-forward="false" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="67" column="93" lean-forward="false" selection-start-line="67" selection-start-column="93" selection-end-line="67" selection-end-column="93" />
+        <state relative-caret-position="102">
+          <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="72" lean-forward="false" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+        <state relative-caret-position="1190">
+          <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="130" column="26" lean-forward="false" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/services/ProfileServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="84" lean-forward="false" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <marker date="1520623232705" expanded="true" signature="1514:1547" ph="SELECT * FRO... profile" />
-            <marker date="1520623232705" expanded="true" signature="1514:1705" ph="SELECT * FRO... profile" />
-            <marker date="1520623232705" expanded="true" signature="1582:1704" ph="SELECT kwett... follow" />
-            <marker date="1520623232705" expanded="true" signature="1697:1704" ph="SELECT kwett... profile_follower" />
-            <marker date="1520623232705" expanded="true" signature="1909:2092" ph="SELECT * FRO... profile" />
-            <marker date="1520623232705" expanded="true" signature="1973:2091" ph="SELECT kwett... profile_following" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Kweet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="845">
+          <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1341,6 +1316,18 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <last-edited>Wildfly|Manual</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.42130178" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
@@ -1404,7 +1391,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.sun.mail:javax.mail:1.5.0</last-edited>
+          <last-edited>Arquillian JUnit:Release</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

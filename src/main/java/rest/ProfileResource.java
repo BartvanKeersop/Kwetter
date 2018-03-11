@@ -35,19 +35,6 @@ public class ProfileResource {
 	}
 
 	@POST
-	@Path("/updateUsername/{profileId},{newUsername}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Response updateUsername(Profile profile){
-		try{
-			profileService.updateUsername(profile);
-			return Response.ok().build();
-		}
-		catch(Exception e){
-			return Response.serverError().build();
-		}
-	}
-
-	@POST
 	@Path("/editProfile")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response updateProfile(ProfileDto profileDto){

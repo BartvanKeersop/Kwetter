@@ -52,22 +52,6 @@ public class Profile implements Serializable {
 	@JoinTable
 	private List<Kweet> kweets;
 
-	/*
-	@OneToMany
-	@JoinTable(
-			name = "profile_followers",
-			joinColumns = @JoinColumn(
-					name = "profile_id",
-					referencedColumnName = "id",
-					nullable = false),
-			inverseJoinColumns = @JoinColumn(
-					name = "follower_id",
-					referencedColumnName = "id",
-					nullable = false))
-	@JsonIgnore
-	private List<Profile> followers;
-	*/
-
 	@ManyToMany
 	@JoinTable(
 			name = "follow",
@@ -83,6 +67,12 @@ public class Profile implements Serializable {
 	private List<Profile> following;
 
 	public Profile(){
+	}
+
+	public Profile(String email, String password, String username){
+		this.username = username;
+		this.password = password;
+		this.email = email;
 	}
 
 	public Long getId() {
@@ -148,16 +138,6 @@ public class Profile implements Serializable {
 	public void setKweets(List<Kweet> kweets) {
 		this.kweets = kweets;
 	}
-
-	/*
-	public List<Profile> getFollowers() {
-		return followers;
-	}
-
-	public void setFollowers(List<Profile> followers) {
-		this.followers = followers;
-	}
-	*/
 
 	public List<Profile> getFollowing() {
 		return following;
