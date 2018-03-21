@@ -2,9 +2,9 @@ package services;
 
 import dao.KweetDao;
 import dao.ProfileDao;
+import entities.Role;
 import entities.Kweet;
 import entities.Profile;
-import security.Permissions;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -41,7 +41,7 @@ public class KweetServiceImpl implements KweetService {
 	}
 
 	@Override
-	public void deleteKweet(long profileId, Kweet kweet, List<Permissions> permissions) {
+	public void deleteKweet(long profileId, Kweet kweet, List<Role> permissions) {
 		kweetDao.deleteKweet(kweet);
 	}
 

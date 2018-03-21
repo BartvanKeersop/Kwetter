@@ -5,7 +5,6 @@ import entities.Profile;
 import dto.ProfileDto;
 import filters.AuthenticationFilter.IAuthenticatedUser;
 import security.AuthenticatedUser;
-import security.Permissions;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -19,17 +18,17 @@ public class ProfileServiceImpl implements ProfileService {
 	@EJB
 	ProfileDao profileDao;
 
-	@Inject
-	@IAuthenticatedUser
-	AuthenticatedUser authenticatedUser;
+	public ProfileDao getProfileDao(){
+		return profileDao;
+	}
 
 	public String test(){
 		return "Hello world";
 	}
 
 	@Override
-	public void updateProfile(ProfileDto profileDto) {
-		Profile updatedProfile = getProfile(authenticatedUser.getId());
+	public void updateProfile(long profileId, ProfileDto profileDto) {
+		Profile updatedProfile = getProfile(profileId);
 
 		updatedProfile.setUsername(profileDto.getUsername());
 		updatedProfile.setEmail(profileDto.getEmail());
@@ -42,9 +41,6 @@ public class ProfileServiceImpl implements ProfileService {
 
 	@Override
 	public void createProfile(Profile profile) {
-		List<Permissions> permissions = new ArrayList<>();
-		permissions.add(Permissions.USER);
-		profile.setPermission(permissions);
 		profileDao.createProfile(profile);
 	}
 

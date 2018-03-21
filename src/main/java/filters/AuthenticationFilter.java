@@ -1,7 +1,7 @@
 package filters;
 
+import entities.Role;
 import entities.Profile;
-import security.Permissions;
 import security.AuthenticatedUser;
 import services.AuthenticationService;
 import javax.annotation.Priority;
@@ -93,13 +93,10 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
 		if (profile == null){
 			authenticatedUser.setId(-1);
-			List<Permissions> permissions = new ArrayList<>();
-			permissions.add(Permissions.GUEST);
-			authenticatedUser.setPermissions(permissions);
+			List<Role> permissions = new ArrayList<>();
 		}
 		else{
 			authenticatedUser.setId(profile.getId());
-			authenticatedUser.setPermissions(profile.getPermission());
 		}
 
 		return authenticatedUser;

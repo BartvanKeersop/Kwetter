@@ -1,9 +1,9 @@
 package entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import security.Permissions;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -33,6 +33,7 @@ import java.util.List;
 public class Profile implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "profile_id")
 	private Long id;
 	@Column(unique = true, nullable = false)
 	private String email;
@@ -40,9 +41,36 @@ public class Profile implements Serializable {
 	private String username;
 	@Column(nullable = false)
 	private String password;
-	@ElementCollection
-	@Enumerated(EnumType.STRING)
-	private List<Permissions> permission;
+	@ManyToMany(mappedBy = "profiles")
+	private List<Role> roles;
+
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
+
+	public List<Kweet> getMentionedIn() {
+		return mentionedIn;
+	}
+
+	public void setMentionedIn(List<Kweet> mentionedIn) {
+		this.mentionedIn = mentionedIn;
+	}
+
+	public List<Kweet> getLikedKweets() {
+		return likedKweets;
+	}
+
+	public void setLikedKweets(List<Kweet> likedKweets) {
+		this.likedKweets = likedKweets;
+	}
+
+	@ManyToMany(mappedBy = "mentions")
+	private List<Kweet> mentionedIn;
+
 	private String biography;
 	private String website;
 	private String location;
@@ -53,18 +81,16 @@ public class Profile implements Serializable {
 	private List<Kweet> kweets;
 
 	@ManyToMany
-	@JoinTable(
-			name = "follow",
-			joinColumns = @JoinColumn(
-					name = "follower_id",
-					referencedColumnName = "id",
-					nullable = false),
-			inverseJoinColumns = @JoinColumn(
-					name = "following_id",
-					referencedColumnName = "id",
-					nullable = false))
 	@JsonIgnore
 	private List<Profile> following;
+
+	@ManyToMany(mappedBy = "following")
+	@JsonIgnore
+	private List<Profile> followers;
+
+	@ManyToMany(mappedBy = "likedBy")
+	@JsonIgnore
+	private List<Kweet> likedKweets;
 
 	public Profile(){
 	}
@@ -73,6 +99,8 @@ public class Profile implements Serializable {
 		this.username = username;
 		this.password = password;
 		this.email = email;
+		this.followers = new ArrayList<>();
+		this.following = new ArrayList<>();
 	}
 
 	public Long getId() {
@@ -155,11 +183,15 @@ public class Profile implements Serializable {
 		this.token = token;
 	}
 
-	public List<Permissions> getPermission() {
-		return permission;
+	public List<Role> getPermission() {
+		return roles;
 	}
 
-	public void setPermission(List<Permissions> permission) {
-		this.permission = permission;
+	public void setPermission(List<Role> permission) {
+		this.roles = permission;
 	}
+
+	public List<Profile> getFollowers() { return followers; }
+
+	public void setFollowers(List<Profile> followers) { this.followers = followers; }
 }

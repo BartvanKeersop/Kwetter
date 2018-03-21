@@ -65,7 +65,7 @@ public class KweetResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response deleteKweet(Kweet kweet){
 		try{
-			kweetService.deleteKweet(authenticatedUser.getId(), kweet, authenticatedUser.getPermissions());
+			//kweetService.deleteKweet(authenticatedUser.getId(), kweet, authenticatedUser.getPermissions());
 			return Response.ok().build();
 		}
 		catch(Exception e){

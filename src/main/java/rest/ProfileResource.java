@@ -3,6 +3,7 @@ package rest;
 import dto.ProfileDto;
 import entities.Profile;
 import filters.AuthenticationFilter.IAuthenticatedUser;
+import org.jboss.logging.Logger;
 import security.AuthenticatedUser;
 import services.ProfileService;
 import javax.ejb.EJB;
@@ -26,6 +27,21 @@ public class ProfileResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getProfile(@PathParam("profileId") long profileId){
 		try{
+			Logger console = Logger.getLogger("CONSOLE");
+			console.info("----LOGGING TEST-----");
+			return Response.ok(
+					profileService.getProfile(profileId)).build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@GET
+	@Path("/profile/")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response get(@PathParam("profileId") long profileId){
+		try{
 			return Response.ok(
 					profileService.getProfile(profileId)).build();
 		}
@@ -39,7 +55,7 @@ public class ProfileResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response updateProfile(ProfileDto profileDto){
 		try{
-			profileService.updateProfile(profileDto);
+			profileService.updateProfile(authenticatedUser.getId(), profileDto);
 			return Response.ok().build();
 		}
 		catch(Exception e){

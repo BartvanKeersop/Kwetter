@@ -15,6 +15,14 @@ public class ProfileDaoImpl implements ProfileDao {
 	@PersistenceContext(name = "kwetterPU")
 	EntityManager entityManager;
 
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+
 	public void createProfile(Profile profile){
 		this.entityManager.persist(profile);
 		this.entityManager.flush();
@@ -28,12 +36,6 @@ public class ProfileDaoImpl implements ProfileDao {
 		myProfile.getFollowing().add(profileToFollow);
 		entityManager.merge(myProfile);
 		entityManager.flush();
-	}
-
-	public void updateUsername(long profileId, String newName) {
-		Profile profile = entityManager.find(Profile.class, profileId);
-		profile.setUsername(newName);
-		entityManager.merge(profile);
 	}
 
 	public Profile getProfile(long profileId){

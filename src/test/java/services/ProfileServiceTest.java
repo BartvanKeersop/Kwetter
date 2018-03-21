@@ -4,17 +4,18 @@ import dto.ProfileDto;
 import entities.Profile;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.logging.Logger;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
+import javax.persistence.*;
 import java.util.List;
 
 
@@ -27,9 +28,35 @@ public class ProfileServiceTest {
 					.addAsResource("test-persistence.xml", "META-INF/persistence.xml")
 					.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 	}
+	private static EntityManager entityManager;
 
-	@Before
-	public void setup(){
+	private static Profile p1;
+	private static Profile p2;
+	private static String name1;
+	private static String name2;
+	private static String email1;
+	private static String email2;
+	private static String password;
+
+	@BeforeClass
+	public static void setup(){
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("KwetterTestPu");
+		entityManager = factory.createEntityManager();
+		//profileService.getProfileDao().setEntityManager(entityManager);
+
+		name1 = "Bart";
+		name2 = "Jules";
+		email1 = "Bart@email.com";
+		email2 = "Jules@email.com";
+		password = "password";
+
+		p1 = new Profile(email1,password, name1);
+		p2 = new Profile(email2, password, name2);
+		p1.getFollowing().add(p2);
+
+		entityManager.persist(p1);
+		entityManager.persist(p2);
+		entityManager.flush();
 	}
 
 	@Inject
@@ -42,61 +69,76 @@ public class ProfileServiceTest {
 	}
 
 	@Test
-	public void testCreateAndGetProfiles(){
-		Profile profile = new Profile();
-		profile.setUsername("username-unique-1234567890");
-		profile.setPassword("password");
-		profile.setEmail("email");
-		profileService.createProfile(profile);
-		Profile profile2 = profileService.getProfiles(profile.getUsername()).get(0);
-		Assert.assertEquals(profile2.getUsername(), "username-unique-1234567890");
+	public void getProfile(){
+		Profile profile = profileService.getProfile(p1.getId());
+		Assert.assertTrue(profile.getEmail().equals(p1.getEmail()));
 	}
 
 	@Test
+	public void createProfile(){
+		String email = "email@email.com";
+
+		//First test if the profile doesn't already exist
+		Query q1 = entityManager.createNativeQuery("SELECT email FROM kwetter_test_db.profile WHERE email = ?", "ProfileMapping");
+		q1.setParameter(1, email);
+		Assert.assertTrue(q1.getResultList().size() == 0);
+
+		profileService.createProfile(
+				new Profile(email, "password", "newUser"));
+
+		//Test if the profile is created
+		Query q2 = entityManager.createNativeQuery("SELECT email FROM kwetter_test_db.profile WHERE email = ?", "ProfileMapping");
+		q2.setParameter(1, email);
+		Assert.assertTrue(q2.getResultList().size() == 1);
+	}
+
+	@Test
+	//Todo: test on multiple fields
 	public void testUpdateProfile(){
-		//Not sure how to mock IAuthenticatedUser
-	}
+		ProfileDto profileDto = new ProfileDto(p1);
+		String oldBio = profileDto.getBiography();
+		String newBio = "This is a new biography.";
+		profileDto.setBiography(newBio);
 
-	@Test
-	public void testFollowProfileAndGetFollowers(){
-		Profile p1 = new Profile("a", "a", "a");
-		Profile p2 = new Profile("b", "b", "b");
-		profileService.createProfile(p1);
-		profileService.createProfile(p2);
-
-		List<ProfileDto> profilesBefore = profileService.getFollowing(p1.getId());
-		Assert.assertTrue(profilesBefore.isEmpty());
-
-		profileService.followProfile(p1.getId(), p2.getId());
-
-		List<ProfileDto> profilesAfter = profileService.getFollowing(p1.getId());
-		//Assert.assertTrue(!profilesAfter.isEmpty());
-	}
-
-	@Test
-	public void testGetProfile(){
-		Profile profile = new Profile("c", "c", "c");
-		profileService.createProfile(profile);
-		String emailFromDb = profileService.getProfile(profile.getId()).getEmail();
-		Assert.assertTrue(profile.getEmail().equals(emailFromDb));
+		profileService.updateProfile(p1.getId(), profileDto);
+		Profile p = entityManager.find(Profile.class, p1.getId());
+		Assert.assertTrue(p.getBiography().equals(newBio));
 	}
 
 	@Test
 	public void testGetFollowers(){
-		/**
-		Profile p4 = new Profile("d", "d", "d");
-		Profile p5 = new Profile("e", "e", "e");
-		profileService.createProfile(p4);
-		profileService.createProfile(p5);
-
-		List<ProfileDto> profilesBefore = profileService.getFollowers(p4.getId());
-		Assert.assertTrue(profilesBefore.isEmpty());
-
-		profileService.followProfile(p5.getId(), p4.getId());
-
-		List<ProfileDto> profilesAfter = profileService.getFollowers(p4.getId());
-		//Assert.assertTrue(!profilesAfter.isEmpty());
-		 **/
+		List<Profile> profiles1 = p1.getFollowers();
+		List<ProfileDto> profiles2 = profileService.getFollowers(p1.getId());
+		Assert.assertTrue(profiles1.size() == profiles2.size());
 	}
 
+	@Test
+	public void testFollowProfile(){
+		Query q1 = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile " +
+						"WHERE id IN " +
+						"(SELECT kwetter_db.follow.following_id " +
+						"FROM kwetter_db.follow " +
+						"WHERE kwetter_db.follow.follower_id = ?)",
+				"ProfileMapping");
+
+		q1.setParameter(1, p2.getId());
+		Assert.assertTrue(q1.getResultList().size() == 0);
+
+		profileService.followProfile(p2.getId(), p1.getId());
+
+		Query q2 = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile " +
+						"WHERE id IN " +
+						"(SELECT kwetter_db.follow.following_id " +
+						"FROM kwetter_db.follow " +
+						"WHERE kwetter_db.follow.follower_id = ?)",
+				"ProfileMapping");
+
+		q1.setParameter(1, p2.getId());
+		Assert.assertTrue(q1.getResultList().size() == 1);
+	}
+
+	@Test
+	public void testGetProfiles(){
+		Assert.assertTrue(profileService.getProfiles(p1.getUsername()).size() == 1);
+	}
 }

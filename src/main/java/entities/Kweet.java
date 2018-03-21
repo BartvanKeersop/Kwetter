@@ -17,6 +17,7 @@ import java.util.List;
 public class Kweet implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "kweet_id")
 	private Long id;
 	private String text;
 	@Temporal(TemporalType.DATE)
@@ -26,31 +27,21 @@ public class Kweet implements Serializable {
 	@ElementCollection
 	private List<String> hashtags;
 
-	@OneToMany
+	@ManyToMany
 	@JoinTable(
 			name = "kweet_mentions",
 			joinColumns = @JoinColumn(
-					name = "profile_id",
-					referencedColumnName = "id",
+					name = "kweet_id",
+					referencedColumnName = "kweet_id",
 					nullable = false),
 			inverseJoinColumns = @JoinColumn(
-					name = "mention_id",
-					referencedColumnName = "id",
+					name = "profile_id",
+					referencedColumnName = "profile_id",
 					nullable = false))
 	@JsonIgnore
 	private List<Profile> mentions;
 
-	@OneToMany
-	@JoinTable(
-			name = "kweet_likedby",
-			joinColumns = @JoinColumn(
-					name = "profile_id",
-					referencedColumnName = "id",
-					nullable = false),
-			inverseJoinColumns = @JoinColumn(
-					name = "kweet_id",
-					referencedColumnName = "id",
-					nullable = false))
+	@ManyToMany
 	@JsonIgnore
 	private List<Profile> likedBy;
 
