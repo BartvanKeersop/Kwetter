@@ -8,15 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6414ec-9854-45de-aaaf-fe729313e501" name="Default" comment="testcommit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/AdminController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/admin/index.xhtml" afterPath="$PROJECT_DIR$/target/Kwetter/admin/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/index.xhtml" afterPath="$PROJECT_DIR$/target/Kwetter/index.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -142,8 +135,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="226">
+              <caret line="43" column="66" lean-forward="false" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -895,7 +888,7 @@
       <workItem from="1521656378779" duration="52000" />
       <workItem from="1521658775474" duration="3989000" />
       <workItem from="1521709097873" duration="672000" />
-      <workItem from="1521713379774" duration="174000" />
+      <workItem from="1521713379774" duration="1224000" />
     </task>
     <servers />
   </component>
@@ -932,7 +925,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233124000" />
+    <option name="totallyTimeSpent" value="234174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1334,8 +1327,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="226">
+          <caret line="43" column="66" lean-forward="false" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
           <folding />
         </state>
       </provider>

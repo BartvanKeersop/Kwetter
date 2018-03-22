@@ -36,6 +36,24 @@
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>1.1.0.Alpha5</version>
+                <configuration>
+                    <hostname>127.0.0.1</hostname>
+                    <port>80801</port>
+                    <username>admin</username>
+                    <password>Admin#70365</password>
+                    <!--<name>${backend.deployment-name}</name>-->
+                    <filename>${project.build.finalName}.war</filename>
+                    <!--<skip>${skipDeployment}</skip>-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>deploy-jar</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
