@@ -6,12 +6,13 @@
 
     <display-name>Kwetter REST</display-name>
 
+    <!--
     <login-config>
         <auth-method>BASIC</auth-method>
         <realm-name>SecuredRealm</realm-name>
     </login-config>
+    -->
 
-    <!--
     <login-config>
         <auth-method>FORM</auth-method>
         <realm-name>SecuredRealm</realm-name>
@@ -20,7 +21,6 @@
             <form-error-page>/loginerror.xhtml</form-error-page>
         </form-login-config>
     </login-config>
-    -->
 
     <security-role>
         <role-name>ADMIN</role-name>
@@ -57,6 +57,7 @@
             30
         </session-timeout>
     </session-config>
+
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
