@@ -36,15 +36,6 @@
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>1.1.0.Alpha5</version>
-                <configuration>
-                    <hostname>127.0.0.1</hostname>
-                    <port>80801</port>
-                    <username>admin</username>
-                    <password>Admin#70365</password>
-                    <!--<name>${backend.deployment-name}</name>-->
-                    <filename>${project.build.finalName}.war</filename>
-                    <!--<skip>${skipDeployment}</skip>-->
-                </configuration>
                 <executions>
                     <execution>
                         <id>deploy-jar</id>
@@ -54,6 +45,31 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <version>1.6.6</version>
+                <configuration>
+                    <container>
+                        <containerId>wildfly11.0.0.Final</containerId>
+                        <type>remote</type>
+                    </container>
+                    <configuration>
+                        <type>runtime</type>
+                        <properties>
+                            <cargo.hostname>localhost</cargo.hostname>
+                            <cargo.jboss.management-native.port>9990</cargo.jboss.management-native.port>
+                        </properties>
+                    </configuration>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jboss.as</groupId>
+                        <artifactId>jboss-as-controller-client</artifactId>
+                        <version>7.0.2.Final</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
