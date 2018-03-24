@@ -3,7 +3,7 @@ sudo: false
 script: mvn clean verify
 addons:
   sonarcloud:
-    organization: "bartvankeersop-github"
+    organization: "bvkeersop-github"
     branches:
     - master
     - development

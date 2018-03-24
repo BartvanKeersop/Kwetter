@@ -17,17 +17,11 @@
         </repository>
     </repositories>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.jboss.arquillian</groupId>
-                <artifactId>arquillian-bom</artifactId>
-                <version>1.3.0.Final</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
 
     <build>
         <finalName>Kwetter</finalName>
@@ -35,41 +29,10 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>1.1.0.Alpha5</version>
-                <executions>
-                    <execution>
-                        <id>deploy-jar</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-                <version>1.6.6</version>
+                <version>1.2.1.Final</version>
                 <configuration>
-                    <container>
-                        <containerId>wildfly11.0.0.Final</containerId>
-                        <type>remote</type>
-                    </container>
-                    <configuration>
-                        <type>runtime</type>
-                        <properties>
-                            <cargo.hostname>localhost</cargo.hostname>
-                            <cargo.jboss.management-native.port>9990</cargo.jboss.management-native.port>
-                        </properties>
-                    </configuration>
+                    <force>true</force>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.jboss.as</groupId>
-                        <artifactId>jboss-as-controller-client</artifactId>
-                        <version>7.0.2.Final</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -92,7 +55,7 @@
         <profile>
             <!-- The profile to execute wildfly managed integration tests.
             Other profiles similar to this could be created for other container adapters-->
-            <id>wildfly-managed</id>
+            <id>wildfly-remote</id>
             <!-- the dependencies for Wildfly  -->
             <dependencies>
                 <dependency>
@@ -226,4 +189,16 @@
       </dependency>
 
   </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>1.3.0.Final</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

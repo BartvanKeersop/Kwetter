@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: services.ProfileServiceTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 27.588 sec <<< FAILURE! - in services.ProfileServiceTest
-services.ProfileServiceTest  Time elapsed: 27.588 sec  <<< ERROR!
-java.lang.NullPointerException
-	at services.ProfileServiceTest.setup(ProfileServiceTest.java:57)
-
