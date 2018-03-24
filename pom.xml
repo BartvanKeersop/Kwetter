@@ -31,10 +31,10 @@
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>1.2.1.Final</version>
                 <configuration>
-                    <hostname>10.0.75.1</hostname>
-                    <port>9990</port>
+                    <hostname>docker.for.win.localhost</hostname>
+                    <port>9991</port>
                     <force>true</force>
-                    <username>newadmin</username>
+                    <username>admin</username>
                     <password>newadmin</password>
                 </configuration>
             </plugin>
