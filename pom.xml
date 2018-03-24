@@ -32,9 +32,9 @@
                 <version>1.2.1.Final</version>
                 <configuration>
                     <hostname>docker.for.win.localhost</hostname>
-                    <port>9991</port>
+                    <port>9990</port>
                     <force>true</force>
-                    <username>admin</username>
+                    <username>newadmin</username>
                     <password>newadmin</password>
                 </configuration>
             </plugin>
