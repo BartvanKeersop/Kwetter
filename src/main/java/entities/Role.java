@@ -1,5 +1,8 @@
 package entities;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -11,7 +14,7 @@ public class Role implements Serializable{
 	@Column(name = "role_name")
 	private String name;
 
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name= "profile_role",
 				joinColumns = @JoinColumn(name = "role_name", referencedColumnName = "role_name"),
 				inverseJoinColumns = @JoinColumn(name = "profile_id", referencedColumnName = "profile_id"))

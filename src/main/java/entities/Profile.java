@@ -16,6 +16,8 @@ import java.util.List;
 				query="SELECT p FROM Profile p WHERE p.email = :email AND p.password = :password"),
 		@NamedQuery(name="Profile.getProfileByToken",
 				query="SELECT p FROM Profile p WHERE p.token = :token"),
+		@NamedQuery(name="Profile.getAll",
+				query="SELECT p FROM Profile p"),
 })
 @SqlResultSetMapping(
 		name = "ProfileMapping",
@@ -41,7 +43,8 @@ public class Profile implements Serializable {
 	private String username;
 	@Column(nullable = false)
 	private String password;
-	@ManyToMany(mappedBy = "profiles")
+
+	@ManyToMany(mappedBy = "profiles", cascade = CascadeType.ALL)
 	private List<Role> roles;
 
 	public List<Role> getRoles() {

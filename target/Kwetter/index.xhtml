@@ -1,7 +1,32 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
 <body>
 <h2>Hello World!</h2>
-<h1>#{adminController.message}</h1>
+<h1>Admin page bitch</h1>
 <h1>#{adminController.welcome()}</h1>
+
+
+<h:dataTable value="#{adminController.getAll()}" var="p">
+
+    <h:column>
+        #{p.id}
+    </h:column>
+    <h:column>
+        #{p.username}
+    </h:column>
+    <h:column>
+        #{p.email}
+    </h:column>
+    <h:column>
+        <h:form>
+            <h:commandLink action="#{adminController.deleteUser(p.id)}" value="delete" />
+        </h:form>
+    </h:column>
+
+</h:dataTable>
+
 </body>
 </html>

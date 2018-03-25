@@ -49,7 +49,6 @@ public class ProfileServiceImpl implements ProfileService {
 		profileDao.followProfile(
 				profileDao.getProfile(myProfileId),
 				profileDao.getProfile(profileToFollowId));
-
 	}
 
 	@Override
@@ -80,5 +79,18 @@ public class ProfileServiceImpl implements ProfileService {
 			profileDtos.add(new ProfileDto(p));
 		}
 		return profileDtos;
+	}
+
+	public List<ProfileDto> getAll(){
+		List<ProfileDto> profileDtos = new ArrayList<>();
+
+		for(Profile p : profileDao.getAll()){
+			profileDtos.add(new ProfileDto(p));
+		}
+		return profileDtos;
+	}
+
+	public void deleteProfile(long profileId){
+		profileDao.deleteProfile(profileId);
 	}
 }

@@ -1,31 +1,32 @@
 package controllers;
 
+import dto.ProfileDto;
 import services.ProfileService;
 
+import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
+import javax.servlet.ServletContext;
 import java.io.Serializable;
+import java.util.List;
 
 @SessionScoped
 @ManagedBean(name = "adminController")
 public class AdminController implements Serializable {
 
-	@Inject
+	@EJB
 	ProfileService profileService;
-
-	private String message;
-
-	public String getMessage() {
-		return "Hello world message!";
-	}
 
 	public String welcome(){
 		return "Welcome!";
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+
+	public List<ProfileDto> getAll(){
+		return profileService.getAll();
+	}
+
+	public void deleteUser(long profileId){
+		profileService.deleteProfile(profileId);
 	}
 }

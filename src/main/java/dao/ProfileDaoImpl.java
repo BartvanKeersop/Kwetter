@@ -71,4 +71,15 @@ public class ProfileDaoImpl implements ProfileDao {
 		q.setParameter(1, profileId);
 		return (List<Profile>) q.getResultList();
 	}
+
+	public List<Profile> getAll(){
+		TypedQuery<Profile> query =
+				entityManager.createNamedQuery("Profile.getAll", Profile.class);
+		return query.getResultList();
+	}
+
+	public void deleteProfile(long profileId){
+		Profile profile = getEntityManager().find(Profile.class, profileId);
+		getEntityManager().remove(profile);
+	}
 }
