@@ -34,8 +34,8 @@
                     <hostname>192.168.24.102</hostname>
                     <port>9990</port>
                     <force>true</force>
-                    <username>newadmin</username>
-                    <password>newadmin</password>
+                    <username>admin</username>
+                    <password>Admin#70365</password>
                 </configuration>
             </plugin>
             <plugin>
