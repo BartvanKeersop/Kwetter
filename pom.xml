@@ -71,12 +71,24 @@
                     <groupId>org.wildfly</groupId>
                     <artifactId>wildfly-arquillian-container-managed</artifactId>
                     <version>8.2.1.Final</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>sun.jdk</groupId>
+                            <artifactId>jconsole</artifactId>
+                        </exclusion>
+                    </exclusions>
                 </dependency>
 
                 <dependency>
                     <groupId>org.wildfly</groupId>
                     <artifactId>wildfly-embedded</artifactId>
                     <version>8.2.1.Final</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>sun.jdk</groupId>
+                            <artifactId>jconsole</artifactId>
+                        </exclusion>
+                    </exclusions>
                 </dependency>
 
             </dependencies>
@@ -135,6 +147,12 @@
           <groupId>org.wildfly</groupId>
           <artifactId>wildfly-dist</artifactId>
           <version>11.0.0.Final</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>sun.jdk</groupId>
+                  <artifactId>jconsole</artifactId>
+              </exclusion>
+          </exclusions>
       </dependency>
 
       <dependency>
@@ -147,12 +165,24 @@
         <groupId>org.wildfly</groupId>
         <artifactId>wildfly-arquillian-container-managed</artifactId>
         <version>8.2.1.Final</version>
+        <exclusions>
+            <exclusion>
+                <groupId>sun.jdk</groupId>
+                <artifactId>jconsole</artifactId>
+            </exclusion>
+        </exclusions>
     </dependency>
 
     <dependency>
         <groupId>org.wildfly</groupId>
         <artifactId>wildfly-embedded</artifactId>
         <version>8.2.1.Final</version>
+        <exclusions>
+            <exclusion>
+                <groupId>sun.jdk</groupId>
+                <artifactId>jconsole</artifactId>
+            </exclusion>
+        </exclusions>
     </dependency>
 
       <!--Junit-->
@@ -200,6 +230,7 @@
           <groupId>org.hibernate</groupId>
           <artifactId>hibernate-core</artifactId>
           <version>5.3.0.CR1</version>
+          <scope>provided</scope>
           <scope>provided</scope>
       </dependency>
 
