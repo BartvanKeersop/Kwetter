@@ -1,6 +1,9 @@
 package dto;
 
 import entities.Profile;
+import entities.Role;
+
+import java.util.List;
 
 public class ProfileDto {
 	private Long id;
@@ -9,6 +12,7 @@ public class ProfileDto {
 	private String biography;
 	private String website;
 	private String location;
+	private List<Role> roles;
 
 	public ProfileDto(){
 
@@ -21,6 +25,7 @@ public class ProfileDto {
 		this.biography = profile.getBiography();
 		this.website = profile.getWebsite();
 		this.location = profile.getLocation();
+		this.roles = profile.getRoles();
 	}
 
 	public Long getId() {

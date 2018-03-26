@@ -8,6 +8,9 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@NamedQueries({
+		@NamedQuery(name="Role.getRoles", query="SELECT r FROM Role r"),
+		})
 public class Role implements Serializable{
 
 	@Id

@@ -1,6 +1,7 @@
 package dao;
 
 import entities.Profile;
+import entities.Role;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
