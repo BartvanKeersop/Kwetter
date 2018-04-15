@@ -1,9 +1,10 @@
 package services;
 
+import dto.LoginDto;
 import entities.Profile;
 
 public interface AuthenticationService {
-	String authenticate(String email, String password) throws Exception;
+	LoginDto authenticate(String email, String password) throws Exception;
 	void deleteToken(Profile profile);
 	Profile getProfileByToken(String token);
 }

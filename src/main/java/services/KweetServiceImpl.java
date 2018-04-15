@@ -2,6 +2,8 @@ package services;
 
 import dao.KweetDao;
 import dao.ProfileDao;
+import dto.KweetDto;
+import dto.ProfileDto;
 import entities.Role;
 import entities.Kweet;
 import entities.Profile;
@@ -22,31 +24,63 @@ public class KweetServiceImpl implements KweetService {
 
 	@Override
 	public void createKweet(long profileId, Kweet kweet) {
-		kweet.setId(profileId);
+		Profile owner = profileDao.getProfile(profileId);
+		kweet.setOwner(owner);
 		kweetDao.createKweet(kweet);
 	}
 
 	@Override
-	public List<Kweet> getMyFeedKweets(long profileId) {
+	public List<KweetDto> getMyFeedKweets(long profileId) {
+		//TODO: add likes
+		List<KweetDto> kweetDtos = new ArrayList<>();
+
+		//Get following by profile Id
 		List<Profile> following = profileDao.getFollowing(profileId);
+		System.out.println(following.size());
 
-		List<Long> feedIds = new ArrayList<>();
-		feedIds.add(profileId);
-
+		//Get kweets by following
 		for (Profile p : following){
-			feedIds.add(p.getId());
-		}
 
-		return kweetDao.getKweetsByIds(feedIds);
+			ProfileDto profileDto = new ProfileDto(p);
+
+			List<Kweet> kweets = kweetDao.getKweetsByProfileId(p.getId());
+			System.out.println(kweets.size());
+
+			//Convert kweets to dtos
+			kweetDtos = mapKweetsToKweetDtos(kweets);
+
+			//Add profileDto to kweet
+			kweetDtos = addProfileDtoToKweetDto(kweetDtos, new ProfileDto(p));
+		}
+		return kweetDtos;
+	}
+
+	@Override
+	public List<Kweet> getMyKweets(long profileId) {
+		return kweetDao.getKweetsByProfileId(profileId);
+	}
+
+	public List<Kweet> getAllKweets() {
+		return kweetDao.getAllKweets();
+	}
+
+	private List<KweetDto> mapKweetsToKweetDtos(List<Kweet> kweets){
+		List<KweetDto> kweetDtos = new ArrayList<>();
+		for (Kweet k : kweets){
+			kweetDtos.add(new KweetDto(k));
+		}
+		return kweetDtos;
+	}
+
+	private List<KweetDto> addProfileDtoToKweetDto(List<KweetDto> kweetDtos, ProfileDto profileDto){
+		for (KweetDto k : kweetDtos){
+			k.setOwner(profileDto);
+		}
+		return kweetDtos;
 	}
 
 	@Override
 	public void deleteKweet(long profileId, Kweet kweet, List<Role> permissions) {
 		kweetDao.deleteKweet(kweet);
-	}
-
-	@Override
-	public List<Kweet> getMyLast10Kweets(long profileId) {
-		return kweetDao.getMyLast10Kweets(profileId);
 	}
 }

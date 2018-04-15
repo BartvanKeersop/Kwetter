@@ -12,6 +12,7 @@ public class ProfileDto {
 	private String biography;
 	private String website;
 	private String location;
+	private String password;
 	private List<Role> roles;
 
 	public ProfileDto(){
@@ -74,5 +75,13 @@ public class ProfileDto {
 
 	public void setLocation(String location) {
 		this.location = location;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

@@ -1,5 +1,6 @@
 package rest;
 
+import dto.LoginDto;
 import entities.Profile;
 import filters.AuthenticationFilter.IAuthenticatedUser;
 import security.AuthenticatedUser;
@@ -22,14 +23,15 @@ public class AuthenticationResource {
 	AuthenticatedUser authenticatedUser;
 
 	@POST
+	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/login")
 	public Response Login(Profile profile) {
 		try {
-			String token = authenticationService
+			LoginDto loginDto = authenticationService
 					.authenticate(profile.getEmail(), profile.getPassword());
 
-			return Response.ok(token).build();
+			return Response.ok(loginDto).header("Access-Control-Allow-Origin", "*").build();
 
 		} catch (Exception e) {
 			return Response.status(Response.Status.FORBIDDEN).build();

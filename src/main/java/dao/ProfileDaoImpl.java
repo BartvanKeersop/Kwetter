@@ -53,22 +53,22 @@ public class ProfileDaoImpl implements ProfileDao {
 
 	public List<Profile> getFollowers(long profileId) {
 		Query q = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile " +
-						"WHERE id IN " +
-						"(SELECT kwetter_db.follow.follower_id " +
-						"FROM kwetter_db.follow " +
-						"WHERE kwetter_db.follow.following_id = ?)",
-				"ProfileMapping");
+						"WHERE profile_id IN " +
+						"(SELECT kwetter_db.profile_profile.followers_profile_id " +
+						"FROM kwetter_db.profile_profile " +
+						"WHERE kwetter_db.profile_profile.following_profile_id = ?)",
+				Profile.class);
 		q.setParameter(1, profileId);
 		return (List<Profile>) q.getResultList();
 	}
 
 	public List<Profile> getFollowing(long profileId) {
 		Query q = entityManager.createNativeQuery("SELECT * FROM kwetter_db.profile " +
-				"WHERE id IN " +
-				"(SELECT kwetter_db.follow.following_id " +
-				"FROM kwetter_db.follow " +
-				"WHERE kwetter_db.follow.follower_id = ?)",
-				"ProfileMapping");
+				"WHERE profile_id IN " +
+				"(SELECT kwetter_db.profile_profile.following_profile_id " +
+				"FROM kwetter_db.profile_profile " +
+				"WHERE kwetter_db.profile_profile.followers_profile_id = ?)",
+				Profile.class);
 		q.setParameter(1, profileId);
 		return (List<Profile>) q.getResultList();
 	}

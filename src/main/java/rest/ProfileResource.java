@@ -37,19 +37,6 @@ public class ProfileResource {
 		}
 	}
 
-	@GET
-	@Path("/profile/")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response get(@PathParam("profileId") long profileId){
-		try{
-			return Response.ok(
-					profileService.getProfile(profileId)).build();
-		}
-		catch(Exception e){
-			return Response.serverError().build();
-		}
-	}
-
 	@POST
 	@Path("/editProfile")
 	@Consumes(MediaType.APPLICATION_JSON)

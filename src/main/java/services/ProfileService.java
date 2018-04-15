@@ -7,7 +7,6 @@ import javax.ejb.Local;
 import java.util.List;
 
 public interface ProfileService {
-	String test();
 	void updateProfile(long profileId, ProfileDto profile);
 	void createProfile(Profile profile);
 	void followProfile(long profileId, long profileToFollowId);

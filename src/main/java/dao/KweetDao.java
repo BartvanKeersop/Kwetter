@@ -9,5 +9,6 @@ public interface KweetDao {
 	void createKweet(Kweet kweet);
 	List<Kweet> getKweetsByIds(List<Long> profileIds);
 	void deleteKweet(Kweet kweet);
-	List<Kweet> getMyLast10Kweets(long profileId);
+	List<Kweet> getKweetsByProfileId(long profileId);
+	List<Kweet> getAllKweets();
 }

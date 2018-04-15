@@ -1,5 +1,6 @@
 package services;
 
+import dto.KweetDto;
 import entities.Role;
 import entities.Kweet;
 
@@ -7,8 +8,8 @@ import java.util.List;
 
 public interface KweetService {
 	void createKweet(long profileId, Kweet kweet);
-	List<Kweet> getMyFeedKweets(long profileId);
+	List<KweetDto> getMyFeedKweets(long profileId);
 	void deleteKweet(long profileId, Kweet kweet, List<Role> permissions);
-	List<Kweet> getMyLast10Kweets(long profileId);
-
+	List<Kweet> getMyKweets(long profileId);
+	List<Kweet> getAllKweets();
 }

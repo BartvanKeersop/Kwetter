@@ -1,6 +1,7 @@
 package services;
 
 
+import dto.LoginDto;
 import entities.Profile;
 
 import javax.ejb.Stateless;
@@ -17,7 +18,7 @@ public class AuthenticationServiceImpl implements AuthenticationService{
 	@PersistenceContext(name = "kwetterPU")
 	EntityManager entityManager;
 
-	public String authenticate(String email, String password) throws Exception {
+	public LoginDto authenticate(String email, String password) throws Exception {
 		TypedQuery<Profile> query =
 				entityManager.createNamedQuery("Profile.authenticate", Profile.class);
 		query.setParameter("email", email).setParameter("password", password);
@@ -25,7 +26,10 @@ public class AuthenticationServiceImpl implements AuthenticationService{
 		Profile profile = query.getSingleResult();
 
 		if (profile != null){
-			return generateToken(profile);
+			return new LoginDto(profile.getId(),
+								profile.getUsername(),
+					"https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg",
+								generateToken(profile));
 		}
 		else {
 			throw new Exception();

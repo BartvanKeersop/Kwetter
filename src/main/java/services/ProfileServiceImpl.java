@@ -3,12 +3,8 @@ package services;
 import dao.ProfileDao;
 import entities.Profile;
 import dto.ProfileDto;
-import filters.AuthenticationFilter.IAuthenticatedUser;
-import security.AuthenticatedUser;
-
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,16 +18,11 @@ public class ProfileServiceImpl implements ProfileService {
 		return profileDao;
 	}
 
-	public String test(){
-		return "Hello world";
-	}
-
 	@Override
 	public void updateProfile(long profileId, ProfileDto profileDto) {
 		Profile updatedProfile = getProfile(profileId);
 
 		updatedProfile.setUsername(profileDto.getUsername());
-		updatedProfile.setEmail(profileDto.getEmail());
 		updatedProfile.setBiography(profileDto.getBiography());
 		updatedProfile.setWebsite(profileDto.getWebsite());
 		updatedProfile.setLocation(profileDto.getLocation());

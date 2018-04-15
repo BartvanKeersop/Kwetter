@@ -1,20 +1,18 @@
 package entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
 @NamedQueries({
-		@NamedQuery(name="Kweet.getFeedKweets",
-				query="SELECT k FROM Kweet k WHERE k.id IN :ids ORDER BY k.creationDate DESC"),
-		@NamedQuery(name="Kweet.getMyKweetsByDateDesc",
-				query="SELECT k FROM Kweet k WHERE k.id = :id ORDER BY k.creationDate DESC")
+		@NamedQuery(name="Kweet.getAllKweets",
+				query="SELECT k FROM Kweet k ORDER BY k.creationDate DESC")
 })
 public class Kweet implements Serializable {
 	@Id
@@ -22,9 +20,8 @@ public class Kweet implements Serializable {
 	@Column(name = "kweet_id")
 	private Long id;
 	private String text;
-	@Temporal(TemporalType.DATE)
-	private Date creationDate;
-	@ManyToOne(optional = false)
+	private LocalDateTime creationDate;
+	@ManyToOne
 	private Profile owner;
 	@ElementCollection
 	private List<String> hashtags;
@@ -58,11 +55,11 @@ public class Kweet implements Serializable {
 		this.text = text;
 	}
 
-	public Date getCreationDate() {
+	public LocalDateTime getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(Date creationDate) {
+	public void setCreationDate(LocalDateTime creationDate) {
 		this.creationDate = creationDate;
 	}
 

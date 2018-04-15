@@ -1,6 +1,7 @@
 package entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -19,19 +20,6 @@ import java.util.List;
 		@NamedQuery(name="Profile.getAll",
 				query="SELECT p FROM Profile p"),
 })
-@SqlResultSetMapping(
-		name = "ProfileMapping",
-		entities = @EntityResult(
-				entityClass = Profile.class,
-				fields = {
-						@FieldResult(name = "id", column = "id"),
-						@FieldResult(name = "biography", column = "biography"),
-						@FieldResult(name = "email", column = "email"),
-						@FieldResult(name = "location", column = "location"),
-						@FieldResult(name = "password", column = "password"),
-						@FieldResult(name = "token", column = "token"),
-						@FieldResult(name = "username", column = "username"),
-						@FieldResult(name = "website", column = "website")}))
 public class Profile implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -84,11 +72,9 @@ public class Profile implements Serializable {
 	private List<Kweet> kweets;
 
 	@ManyToMany
-	@JsonIgnore
 	private List<Profile> following;
 
 	@ManyToMany(mappedBy = "following")
-	@JsonIgnore
 	private List<Profile> followers;
 
 	@ManyToMany(mappedBy = "likedBy")
@@ -170,6 +156,7 @@ public class Profile implements Serializable {
 		this.kweets = kweets;
 	}
 
+	@JsonIgnore
 	public List<Profile> getFollowing() {
 		return following;
 	}
@@ -194,6 +181,7 @@ public class Profile implements Serializable {
 		this.roles = permission;
 	}
 
+	@JsonIgnore
 	public List<Profile> getFollowers() { return followers; }
 
 	public void setFollowers(List<Profile> followers) { this.followers = followers; }

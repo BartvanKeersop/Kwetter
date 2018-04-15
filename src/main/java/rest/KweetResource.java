@@ -11,7 +11,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/Kweet")
+@Path("/kweet")
 public class KweetResource {
 
 	@Inject
@@ -35,12 +35,38 @@ public class KweetResource {
 	}
 
 	@GET
-	@Path("/getMyLast10Kweets")
+	@Path("/getMyKweets")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getMyLast10Kweets(){
+	public Response getMyKweets(){
 		try{
 			return Response.ok(
-					kweetService.getMyLast10Kweets(authenticatedUser.getId())).build();
+					kweetService.getMyKweets(authenticatedUser.getId())).build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@GET
+	@Path("/getAllKweets")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getAllKweets(){
+		try{
+			return Response.ok(
+					kweetService.getAllKweets()).build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@GET
+	@Path("/getKweetsByProfileId/{profileId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getProfile(@PathParam("profileId") long profileId){
+		try{
+			return Response.ok(
+					kweetService.getMyKweets(profileId)).build();
 		}
 		catch(Exception e){
 			return Response.serverError().build();
@@ -52,6 +78,7 @@ public class KweetResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createKweet(Kweet kweet){
 		try{
+			System.out.println("*****************************AUTHENTICATED USER ID" + Long.toString(authenticatedUser.getId()));
 			kweetService.createKweet(authenticatedUser.getId(), kweet);
 			return Response.ok().build();
 		}
