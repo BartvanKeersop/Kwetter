@@ -147,6 +147,7 @@ public class Profile implements Serializable {
 		this.location = location;
 	}
 
+	@JsonIgnore
 	public List<Kweet> getKweets() {
 		return kweets;
 	}

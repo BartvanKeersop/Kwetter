@@ -6,6 +6,6 @@ import java.util.List;
 
 
 public interface RoleDao {
-	List<Role> getAllRoles();
-	List<Role> getProfileRoles(long profileId);
+	void setAdminRole(long profileId);
+	void removeAdminRole(long profileId);
 }
