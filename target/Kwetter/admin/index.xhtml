@@ -11,7 +11,9 @@
 <h:dataTable value="#{adminController.getAll()}" var="p">
 
     <h:column>
-        #{p.id}
+        <a href="/Kwetter/admin/profile.xhtml?id=#{p.id}">
+            #{p.id}
+        </a>
     </h:column>
     <h:column>
         #{p.username}

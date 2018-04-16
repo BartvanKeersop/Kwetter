@@ -83,4 +83,9 @@ public class KweetServiceImpl implements KweetService {
 	public void deleteKweet(long profileId, Kweet kweet, List<Role> permissions) {
 		kweetDao.deleteKweet(kweet);
 	}
+
+	@Override
+	public void deleteKweetAsAdmin(Kweet kweet) {
+		kweetDao.deleteKweet(kweet);
+	}
 }

@@ -1,8 +1,6 @@
 package entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,7 +10,9 @@ import java.util.List;
 @Entity
 @NamedQueries({
 		@NamedQuery(name="Kweet.getAllKweets",
-				query="SELECT k FROM Kweet k ORDER BY k.creationDate DESC")
+				query="SELECT k FROM Kweet k ORDER BY k.creationDate DESC"),
+		@NamedQuery(name="Kweet.getKweet",
+				query="SELECT k FROM Kweet k WHERE k.id = :id")
 })
 public class Kweet implements Serializable {
 	@Id
@@ -21,7 +21,9 @@ public class Kweet implements Serializable {
 	private Long id;
 	private String text;
 	private LocalDateTime creationDate;
+
 	@ManyToOne
+	@JoinColumn(name="owner_id")
 	private Profile owner;
 	@ElementCollection
 	private List<String> hashtags;

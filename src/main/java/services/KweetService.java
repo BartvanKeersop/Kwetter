@@ -12,4 +12,5 @@ public interface KweetService {
 	void deleteKweet(long profileId, Kweet kweet, List<Role> permissions);
 	List<Kweet> getMyKweets(long profileId);
 	List<Kweet> getAllKweets();
+	void deleteKweetAsAdmin(Kweet kweet);
 }

@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<body>
+<h2>Admin page - profile</h2>
+
+<f:metadata>
+    <f:viewParam name="id" value="#{profileController.profileId}" />
+    <f:viewAction action="#{profileController.onload()}" />
+</f:metadata>
+
+<h2>Profile information</h2>
+<h:dataTable value="#{profileController.getProfile()}" var="p">
+    <h:column>
+        id = #{p.id}
+    </h:column>
+    <h:column>
+        name = #{p.username}
+    </h:column>
+    <h:column>
+        email = #{p.email}
+    </h:column>
+    <h:column>
+        location = #{p.location}
+    </h:column>
+    <h:column>
+        biography = #{p.biography}
+    </h:column>
+</h:dataTable>
+
+<h2>Kweets</h2>
+<h:dataTable value="#{profileController.getKweetsByProfileId()}" var="k">
+
+    <h:column>
+        #{k.id}
+    </h:column>
+    <h:column>
+        #{k.text}
+    </h:column>
+    <h:column>
+        <h:form>
+            <h:commandLink action="#{profileController.deleteKweet(k.id)}" value="delete" />
+        </h:form>
+    </h:column>
+    <h:column>
+    </h:column>
+
+
+</h:dataTable>
+
+</body>
+</html>

@@ -67,8 +67,7 @@ public class Profile implements Serializable {
 	private String location;
 	private String token;
 
-	@OneToMany
-	@JoinTable
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "owner")
 	private List<Kweet> kweets;
 
 	@ManyToMany
