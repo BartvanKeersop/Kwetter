@@ -14,6 +14,7 @@ public class KweetDto {
 	private List<String> hashtags;
 	private List<ProfileDto> mentions;
 	private List<ProfileDto> likedBy;
+	private List<String> links;
 
 	public KweetDto(Kweet kweet){
 		this.id = kweet.getId();
@@ -75,5 +76,13 @@ public class KweetDto {
 
 	public void setLikedBy(List<ProfileDto> likedBy) {
 		this.likedBy = likedBy;
+	}
+
+	public List<String> getLinks() {
+		return links;
+	}
+
+	public void setLinks(List<String> links) {
+		this.links = links;
 	}
 }

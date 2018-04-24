@@ -43,7 +43,16 @@ public class Kweet implements Serializable {
 	private List<Profile> mentions;
 
 	@ManyToMany
-	@JsonIgnore
+	@JoinTable(
+			name = "kweet_likes",
+			joinColumns = @JoinColumn(
+					name = "kweet_id",
+					referencedColumnName = "kweet_id",
+					nullable = false),
+			inverseJoinColumns = @JoinColumn(
+					name = "profile_id",
+					referencedColumnName = "profile_id",
+					nullable = false))
 	private List<Profile> likedBy;
 
 	public Kweet(){
@@ -57,6 +66,7 @@ public class Kweet implements Serializable {
 		this.text = text;
 	}
 
+	@JsonIgnore
 	public LocalDateTime getCreationDate() {
 		return creationDate;
 	}

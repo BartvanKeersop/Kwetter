@@ -35,30 +35,6 @@ public class Profile implements Serializable {
 	@ManyToMany(mappedBy = "profiles", cascade = CascadeType.ALL)
 	private List<Role> roles;
 
-	public List<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
-	}
-
-	public List<Kweet> getMentionedIn() {
-		return mentionedIn;
-	}
-
-	public void setMentionedIn(List<Kweet> mentionedIn) {
-		this.mentionedIn = mentionedIn;
-	}
-
-	public List<Kweet> getLikedKweets() {
-		return likedKweets;
-	}
-
-	public void setLikedKweets(List<Kweet> likedKweets) {
-		this.likedKweets = likedKweets;
-	}
-
 	@ManyToMany(mappedBy = "mentions")
 	private List<Kweet> mentionedIn;
 
@@ -77,7 +53,6 @@ public class Profile implements Serializable {
 	private List<Profile> followers;
 
 	@ManyToMany(mappedBy = "likedBy")
-	@JsonIgnore
 	private List<Kweet> likedKweets;
 
 	public Profile(){
@@ -90,6 +65,32 @@ public class Profile implements Serializable {
 		this.followers = new ArrayList<>();
 		this.following = new ArrayList<>();
 	}
+
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
+
+	public List<Kweet> getMentionedIn() {
+		return mentionedIn;
+	}
+
+	public void setMentionedIn(List<Kweet> mentionedIn) {
+		this.mentionedIn = mentionedIn;
+	}
+
+	@JsonIgnore
+	public List<Kweet> getLikedKweets() {
+		return likedKweets;
+	}
+
+	public void setLikedKweets(List<Kweet> likedKweets) {
+		this.likedKweets = likedKweets;
+	}
+
 
 	public Long getId() {
 		return id;

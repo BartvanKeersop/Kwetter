@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 
 @Path("/kweet")
 public class KweetResource {
@@ -80,6 +81,32 @@ public class KweetResource {
 		try{
 			System.out.println("*****************************AUTHENTICATED USER ID" + Long.toString(authenticatedUser.getId()));
 			kweetService.createKweet(authenticatedUser.getId(), kweet);
+			return Response.ok().build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@POST
+	@Path("/likeKweet")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response likeKweet(Kweet kweet){
+		try{
+			kweetService.likeKweet(authenticatedUser.getId(), kweet.getId());
+			return Response.ok().build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@POST
+	@Path("/unlikeKweet")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response unlikeKweet(Kweet kweet){
+		try{
+			kweetService.unlikeKweet(authenticatedUser.getId(), kweet.getId());
 			return Response.ok().build();
 		}
 		catch(Exception e){

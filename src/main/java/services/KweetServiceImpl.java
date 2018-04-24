@@ -88,4 +88,32 @@ public class KweetServiceImpl implements KweetService {
 	public void deleteKweetAsAdmin(Kweet kweet) {
 		kweetDao.deleteKweet(kweet);
 	}
+
+	@Override
+	public void likeKweet(long profileId, long kweetId) {
+		if(!checkIfAlreadyLiked(profileId, kweetId)) {
+			Profile profile = profileDao.getProfile(profileId);
+			Kweet kweet = kweetDao.getKweet(kweetId);
+			kweetDao.likeKweet(kweet, profile);
+		}
+	}
+
+	@Override
+	public void unlikeKweet(long profileId, long kweetId) {
+		if(checkIfAlreadyLiked(profileId, kweetId)) {
+			System.out.println("unliking kweet");
+			kweetDao.unlikeKweet(kweetId, profileId);
+		}
+	}
+
+	private boolean checkIfAlreadyLiked(long profileId, long kweetId){
+		Kweet kweet = kweetDao.getKweet(kweetId);
+
+		for (Profile profile : kweet.getLikedBy()){
+			if(profile.getId() == profileId){
+				return true;
+			}
+		}
+		return false;
+	}
 }

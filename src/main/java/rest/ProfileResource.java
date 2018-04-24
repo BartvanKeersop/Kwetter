@@ -9,11 +9,17 @@ import services.ProfileService;
 import javax.ejb.EJB;
 import javax.inject.Inject;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 
 @Path("/profile")
 public class ProfileResource {
+
+	@Context
+	UriInfo uriInfo;
+
 
 	@EJB
 	ProfileService profileService;

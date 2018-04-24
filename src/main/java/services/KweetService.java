@@ -13,4 +13,6 @@ public interface KweetService {
 	List<Kweet> getMyKweets(long profileId);
 	List<Kweet> getAllKweets();
 	void deleteKweetAsAdmin(Kweet kweet);
+	void likeKweet(long profileId, long kweetId);
+	void unlikeKweet(long profileId, long kweetId);
 }
