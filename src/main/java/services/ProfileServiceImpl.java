@@ -20,7 +20,7 @@ public class ProfileServiceImpl implements ProfileService {
 
 	@Override
 	public void updateProfile(long profileId, ProfileDto profileDto) {
-		Profile updatedProfile = getProfile(profileId);
+		Profile updatedProfile = profileDao.getProfile(profileId);
 
 		updatedProfile.setUsername(profileDto.getUsername());
 		updatedProfile.setBiography(profileDto.getBiography());
@@ -43,8 +43,8 @@ public class ProfileServiceImpl implements ProfileService {
 	}
 
 	@Override
-	public Profile getProfile(long profileId) {
-		return profileDao.getProfile(profileId);
+	public ProfileDto getProfile(long profileId) {
+		return new ProfileDto(profileDao.getProfile(profileId));
 	}
 
 	@Override

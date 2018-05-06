@@ -1,7 +1,7 @@
 package controllers;
 
+import dto.ProfileDto;
 import entities.Kweet;
-import entities.Profile;
 import services.KweetService;
 import services.ProfileService;
 
@@ -30,7 +30,7 @@ public class ProfileController {
 	@EJB
 	KweetService kweetService;
 
-	public Profile getProfile(){
+	public ProfileDto getProfile(){
 		return profileService.getProfile(profileId);
 	}
 
