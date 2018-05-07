@@ -31,19 +31,30 @@ public class ProfileResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getProfile(@PathParam("profileId") long profileId){
 		try{
+
 			System.out.println(profileId);
 			ProfileDto profileDto = profileService.getProfile(profileId);
 			List<Link> links = new ArrayList<>();
 
 			//Link to self
-			String link = "/getProfile/" + Long.toString(profileId);
+			String link = "/profile/getProfile/" + Long.toString(profileId);
 			Link selfLink = new Link(HyperlinkGenerator.build(link), "self");
 			links.add(selfLink);
 
 			//Link to kweets
-			link = "/getKweetsByProfileId/" + Long.toString(profileId);
+			link = "/kweet/getKweetsByProfileId/" + Long.toString(profileId);
 			Link kweetsLink = new Link(HyperlinkGenerator.build(link), "kweets");
 			links.add(kweetsLink);
+
+			//Link to followers
+			link = "/profile/getFollowers/" + Long.toString(profileId);
+			Link followersLink = new Link(HyperlinkGenerator.build(link), "followers");
+			links.add(followersLink);
+
+			//Link to following
+			link = "/profile/getFollowing/" + Long.toString(profileId);
+			Link followingLink = new Link(HyperlinkGenerator.build(link), "following");
+			links.add(followingLink);
 
 			profileDto.setLinks(links);
 
