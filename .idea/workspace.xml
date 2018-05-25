@@ -8,41 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6414ec-9854-45de-aaaf-fe729313e501" name="Default" comment="testcommit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/UTIL/HyperlinkGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dto/TestDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/Link.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dao/KweetDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/KweetServiceImpl.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/SocketEndpoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sockets/encoders/KwetterNotifcationEncoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sockets/messages/KwetterNotification.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter.war" afterPath="$PROJECT_DIR$/target/Kwetter.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDao.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDaoImpl.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/KweetDto.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/KweetDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Kweet.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Kweet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/entities/Profile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/KweetResource.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/KweetResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/ProfileResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/TestResource.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/TestResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/KweetService.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/KweetService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/KweetServiceImpl.class" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/KweetServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/KweetDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/KweetDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dto/KweetDto.class" afterPath="$PROJECT_DIR$/target/classes/dto/KweetDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entities/Kweet.class" afterPath="$PROJECT_DIR$/target/classes/entities/Kweet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entities/Profile.class" afterPath="$PROJECT_DIR$/target/classes/entities/Profile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rest/KweetResource.class" afterPath="$PROJECT_DIR$/target/classes/rest/KweetResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rest/ProfileResource.class" afterPath="$PROJECT_DIR$/target/classes/rest/ProfileResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rest/TestResource.class" afterPath="$PROJECT_DIR$/target/classes/rest/TestResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services/KweetService.class" afterPath="$PROJECT_DIR$/target/classes/services/KweetService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/KweetDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/KweetDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dto/KweetDto.java" afterPath="$PROJECT_DIR$/src/main/java/dto/KweetDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entities/Kweet.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Kweet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entities/Profile.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Profile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" afterPath="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" afterPath="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rest/TestResource.java" afterPath="$PROJECT_DIR$/src/main/java/rest/TestResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/KweetService.java" afterPath="$PROJECT_DIR$/src/main/java/services/KweetService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,91 +41,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="KweetServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java">
+      <file leaf-file-name="ProfileResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="103" column="49" lean-forward="false" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="49" />
+            <state relative-caret-position="459">
+              <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KweetDaoImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java">
+      <file leaf-file-name="SocketEndpoint.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SocketEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="45" column="59" lean-forward="false" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
-              <folding>
-                <marker date="1524591131866" expanded="true" signature="586:632" ph="SELECT * FRO... kweet" />
-                <marker date="1524591131866" expanded="true" signature="586:635" ph="SELECT * FRO... kweet" />
-                <marker date="1524591131866" expanded="true" signature="586:636" ph="SELECT * FRO... profile" />
-                <marker date="1524591131866" expanded="true" signature="1225:1332" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KweetDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="61" column="49" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="61" selection-end-column="49" />
-              <folding>
-                <marker date="1523621149751" expanded="true" signature="1514:1757" ph="SELECT * FRO... profile" />
-                <marker date="1523621149751" expanded="true" signature="1590:1756" ph="SELECT kwett... follow" />
-                <marker date="1523621149751" expanded="true" signature="1958:2193" ph="SELECT * FRO... profile" />
-                <marker date="1523621149751" expanded="true" signature="2030:2192" ph="SELECT kwett... follow" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProfileDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KweetResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="111" column="27" lean-forward="false" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KweetService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kweet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Kweet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="68" column="15" lean-forward="false" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+            <state relative-caret-position="60">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,22 +63,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KweetDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dto/KweetDto.java">
+      <file leaf-file-name="TestResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rest/TestResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Profile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="332">
+              <caret line="61" column="16" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,6 +106,7 @@
       <find>war</find>
       <find>getLiked</find>
       <find>initLinks</find>
+      <find>Link</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,20 +120,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/loginerror.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
-        <option value="$PROJECT_DIR$/target/Kwetter/login.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
-        <option value="$PROJECT_DIR$/target/Kwetter/admin/index.xhtml" />
-        <option value="$PROJECT_DIR$/src/test/java/services/ProfileServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ProfileDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AuthenticationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dto/LoginDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AuthenticationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/MetricsResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/KwetterApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ProfileService.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataGenerator/DataGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/datagenerator/IDataGenerator.java" />
@@ -244,15 +135,12 @@
         <option value="$PROJECT_DIR$/src/main/java/dto/FeedKweetDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dto/ProfileDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java" />
         <option value="$PROJECT_DIR$/target/Kwetter/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/ProfileController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/profile.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/services/RoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/RoleDao.java" />
@@ -260,18 +148,29 @@
         <option value="$PROJECT_DIR$/src/main/java/services/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Profile.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/HKweetResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/dto/KweetDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/UTIL/HyperlinkGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Link.java" />
         <option value="$PROJECT_DIR$/src/main/java/dto/TestDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/TestResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Kweet.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/KweetDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/KweetService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/filters/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Link.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ProfileService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ProfileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dto/ProfileDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/UTIL/HyperlinkGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/ProfileResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sockets/encoders/NotificationEncoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sockets/messages/KwetterNotification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sockets/encoders/KwetterNotifcationEncoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sockets/SocketEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/TestResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SocketEndpoint.java" />
       </list>
     </option>
   </component>
@@ -296,10 +195,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2097" />
-    <option name="y" value="30" />
-    <option name="width" value="973" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -336,8 +235,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,31 +270,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -410,14 +287,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="UTIL" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -488,7 +357,7 @@
               <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="sockets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -506,8 +375,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -519,22 +386,22 @@
     <property name="project.structure.side.proportion" value="0.42130178" />
     <property name="jdk.selected.JAVA_MODULE" value="8" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DPI" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Github\Kwetter\src\test\resources" />
+      <recent name="C:\Github\Kwetter\src\test\resources\resources-jbossas-managed" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="services" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Github\Kwetter\src\test\resources\META-INF" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Github\Kwetter\src\test\resources" />
-      <recent name="C:\Github\Kwetter\src\test\resources\resources-jbossas-managed" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1018,7 +885,16 @@
       <workItem from="1523948780830" duration="54000" />
       <workItem from="1524315392661" duration="8544000" />
       <workItem from="1524500320999" duration="33000" />
-      <workItem from="1524584022894" duration="4508000" />
+      <workItem from="1524584022894" duration="9571000" />
+      <workItem from="1525617051295" duration="7102000" />
+      <workItem from="1525698821343" duration="7148000" />
+      <workItem from="1525763246945" duration="81000" />
+      <workItem from="1526213881816" duration="6140000" />
+      <workItem from="1526389864174" duration="639000" />
+      <workItem from="1526390932923" duration="19000" />
+      <workItem from="1526391329026" duration="616000" />
+      <workItem from="1526394198810" duration="66000" />
+      <workItem from="1526408514771" duration="2998000" />
     </task>
     <servers />
   </component>
@@ -1055,15 +931,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370148000" />
+    <option name="totallyTimeSpent" value="400020000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.38697916" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1075,16 +951,16 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39891306" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2361111" sideWeight="0.38020834" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23586957" sideWeight="0.38020834" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4085648" sideWeight="0.61302084" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20434782" sideWeight="0.61302084" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27184466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19509594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1148,65 +1024,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/services/ProfileServiceTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ModeratorResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/Kwetter/index.xhtml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KwetterApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/AuthenticationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/MetricsResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="70" lean-forward="false" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datagenerator/IDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datagenerator/DataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/AuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1222,7 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,28 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="33" column="92" lean-forward="false" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="81" column="130" lean-forward="false" selection-start-line="81" selection-start-column="130" selection-end-line="81" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1460#1461#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1279,59 +1077,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#508#509#0" expanded="false" />
-            <element signature="e#532#533#0" expanded="false" />
-            <element signature="e#758#759#0" expanded="false" />
-            <element signature="e#804#805#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#373#374#0" expanded="false" />
-            <element signature="e#396#397#0" expanded="false" />
-            <element signature="e#441#442#0" expanded="false" />
-            <element signature="e#474#475#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-            <element signature="e#700#701#0" expanded="false" />
-            <element signature="e#749#750#0" expanded="false" />
-            <element signature="e#773#774#0" expanded="false" />
-            <element signature="e#808#809#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1342,18 +1092,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/RoleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,7 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1387,85 +1127,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rest/HKweetResource.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="e#195#196#0" expanded="false" />
-            <element signature="e#232#233#0" expanded="false" />
-            <element signature="e#255#256#0" expanded="false" />
-            <element signature="e#282#283#0" expanded="false" />
-            <element signature="e#299#300#0" expanded="false" />
-            <element signature="e#334#335#0" expanded="false" />
-            <element signature="e#355#356#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UTIL/HyperlinkGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#227#228#0" expanded="false" />
-            <element signature="e#256#257#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.0.Final/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar!/javax/ws/rs/core/UriBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dto/TestDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/TestResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1473,7 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1481,7 +1146,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1489,7 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,9 +1160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="68" column="15" lean-forward="false" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1507,20 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="61" column="49" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <marker date="1523621149751" expanded="true" signature="1514:1757" ph="SELECT * FRO... profile" />
-            <marker date="1523621149751" expanded="true" signature="1590:1756" ph="SELECT kwett... follow" />
-            <marker date="1523621149751" expanded="true" signature="1958:2193" ph="SELECT * FRO... profile" />
-            <marker date="1523621149751" expanded="true" signature="2030:2192" ph="SELECT kwett... follow" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="111" column="27" lean-forward="false" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,15 +1174,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
+        <state relative-caret-position="1428">
           <caret line="103" column="49" lean-forward="false" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1544,19 +1188,190 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/filters/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="39" column="52" lean-forward="false" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ProfileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="595">
           <caret line="45" column="59" lean-forward="false" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/ProfileDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KwetterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.0.Final/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar!/javax/ws/rs/core/UriBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="80" column="12" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/socket.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sockets/encoders/NotificationEncoder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
-            <marker date="1524591131866" expanded="true" signature="586:632" ph="SELECT * FRO... kweet" />
-            <marker date="1524591131866" expanded="true" signature="586:635" ph="SELECT * FRO... kweet" />
-            <marker date="1524591131866" expanded="true" signature="586:636" ph="SELECT * FRO... profile" />
-            <marker date="1524591131866" expanded="true" signature="1225:1332" ph="DELETE FROM " />
+            <element signature="e#142#143#0" expanded="false" />
+            <element signature="e#183#184#0" expanded="false" />
+            <element signature="e#210#211#0" expanded="false" />
+            <element signature="e#241#242#0" expanded="false" />
+            <element signature="e#262#263#0" expanded="false" />
+            <element signature="e#305#306#0" expanded="false" />
+            <element signature="e#334#335#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sockets/encoders/KwetterNotifcationEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sockets/messages/KwetterNotification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#126#127#0" expanded="false" />
+            <element signature="e#149#150#0" expanded="false" />
+            <element signature="e#177#178#0" expanded="false" />
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#232#233#0" expanded="false" />
+            <element signature="e#255#256#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/UTIL/HyperlinkGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/TestResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="61" column="16" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ProfileResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SocketEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

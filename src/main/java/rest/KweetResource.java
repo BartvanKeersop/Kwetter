@@ -64,7 +64,7 @@ public class KweetResource {
 	@GET
 	@Path("/getKweetsByProfileId/{profileId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getProfile(@PathParam("profileId") long profileId){
+	public Response getKweetsByProfileId(@PathParam("profileId") long profileId){
 		try{
 			return Response.ok(
 					kweetService.getMyKweets(profileId)).build();
@@ -79,7 +79,6 @@ public class KweetResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createKweet(Kweet kweet){
 		try{
-			System.out.println("*****************************AUTHENTICATED USER ID" + Long.toString(authenticatedUser.getId()));
 			kweetService.createKweet(authenticatedUser.getId(), kweet);
 			return Response.ok().build();
 		}

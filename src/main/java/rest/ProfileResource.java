@@ -1,25 +1,23 @@
 package rest;
 
+import UTIL.HyperlinkGenerator;
 import dto.ProfileDto;
 import entities.Profile;
 import filters.AuthenticationFilter.IAuthenticatedUser;
-import org.jboss.logging.Logger;
+import model.Link;
 import security.AuthenticatedUser;
 import services.ProfileService;
 import javax.ejb.EJB;
 import javax.inject.Inject;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.core.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Path("/profile")
 public class ProfileResource {
-
 	@Context
 	UriInfo uriInfo;
-
 
 	@EJB
 	ProfileService profileService;
@@ -33,12 +31,38 @@ public class ProfileResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getProfile(@PathParam("profileId") long profileId){
 		try{
-			Logger console = Logger.getLogger("CONSOLE");
-			console.info("----LOGGING TEST-----");
+
+			System.out.println(profileId);
+			ProfileDto profileDto = profileService.getProfile(profileId);
+			List<Link> links = new ArrayList<>();
+
+			//Link to self
+			String link = "/profile/getProfile/" + Long.toString(profileId);
+			Link selfLink = new Link(HyperlinkGenerator.build(link), "self");
+			links.add(selfLink);
+
+			//Link to kweets
+			link = "/kweet/getKweetsByProfileId/" + Long.toString(profileId);
+			Link kweetsLink = new Link(HyperlinkGenerator.build(link), "kweets");
+			links.add(kweetsLink);
+
+			//Link to followers
+			link = "/profile/getFollowers/" + Long.toString(profileId);
+			Link followersLink = new Link(HyperlinkGenerator.build(link), "followers");
+			links.add(followersLink);
+
+			//Link to following
+			link = "/profile/getFollowing/" + Long.toString(profileId);
+			Link followingLink = new Link(HyperlinkGenerator.build(link), "following");
+			links.add(followingLink);
+
+			profileDto.setLinks(links);
+
 			return Response.ok(
-					profileService.getProfile(profileId)).build();
+					profileDto).build();
 		}
 		catch(Exception e){
+			e.printStackTrace();
 			return Response.serverError().build();
 		}
 	}
