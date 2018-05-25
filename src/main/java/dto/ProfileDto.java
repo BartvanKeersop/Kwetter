@@ -1,8 +1,7 @@
 package dto;
 
 import entities.Profile;
-import entities.Role;
-
+import model.Link;
 import java.util.List;
 
 public class ProfileDto {
@@ -13,11 +12,9 @@ public class ProfileDto {
 	private String website;
 	private String location;
 	private String password;
-	private List<Role> roles;
+	private List<Link> links;
 
-	public ProfileDto(){
-
-	}
+	public ProfileDto(){}
 
 	public ProfileDto(Profile profile){
 		this.id = profile.getId();
@@ -26,7 +23,16 @@ public class ProfileDto {
 		this.biography = profile.getBiography();
 		this.website = profile.getWebsite();
 		this.location = profile.getLocation();
-		this.roles = profile.getRoles();
+	}
+
+	public ProfileDto(Profile profile, List<Link> links){
+		this.id = profile.getId();
+		this.email = profile.getEmail();
+		this.username = profile.getUsername();
+		this.biography = profile.getBiography();
+		this.website = profile.getWebsite();
+		this.location = profile.getLocation();
+		this.links = links;
 	}
 
 	public Long getId() {
@@ -83,5 +89,13 @@ public class ProfileDto {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public List<Link> getLinks() {
+		return links;
+	}
+
+	public void setLinks(List<Link> links) {
+		this.links = links;
 	}
 }

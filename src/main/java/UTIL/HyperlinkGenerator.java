@@ -5,20 +5,17 @@ import rest.KweetResource;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.UriInfo;
+import java.util.List;
 
 public class HyperlinkGenerator {
 
-	@Context
-	UriInfo uriInfo;
+	private static final String host = "http:/localhost:8080/Kwetter/api";
 
-	private void x(){
-		build(this.getClass());
-	}
-
-	public void build(Class c){
-		UriBuilder builder = UriBuilder.fromResource(KweetResource.class);
-		builder.host((uriInfo.getBaseUri()).toString());
-		builder.path(KweetResource.class, "getKweet");
+	public static String build(String link){
+		StringBuilder builder = new StringBuilder();
+		builder.append(host);
+		builder.append(link);
+		return builder.toString();
 	}
 
 }
