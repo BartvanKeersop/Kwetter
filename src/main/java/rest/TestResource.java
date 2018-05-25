@@ -3,13 +3,11 @@ package rest;
 import datagenerator.IDataGenerator;
 import dto.TestDto;
 import filters.AuthenticationFilter.IAuthenticatedUser;
+import model.Message;
 import org.jboss.logging.Logger;
 import security.AuthenticatedUser;
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.net.URI;
 
@@ -31,6 +29,17 @@ public class TestResource {
 	public Response get(){
 		try{
 			dataGenerator.generateData();
+			return Response.ok().build();
+		}
+		catch(Exception e){
+			return Response.serverError().build();
+		}
+	}
+
+	@POST
+	@Path("/message")
+	public Response message(Message message){
+		try{
 			return Response.ok().build();
 		}
 		catch(Exception e){
